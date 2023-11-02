@@ -8,28 +8,28 @@ msgstr ""
 "Project-Id-Version: data.table 1.13.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-17 13:11-0400\n"
-"PO-Revision-Date: 2023-10-31 13:18-0300\n"
+"PO-Revision-Date: 2023-11-02 14:15-0300\n"
 "Last-Translator: Rafael Fontenelle <rffontenelle@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <ldpbr-translation@lists.sourceforge."
-"net>\n"
+"Language-Team: Brazilian Portuguese <>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 45.2\n"
 
 #: assign.c:7
 msgid "Internal error: finalizer hasn't received an ExternalPtr"
-msgstr ""
+msgstr "Erro interno: finalizador não recebeu um ExternalPtr"
 
 #: assign.c:9
 msgid "Internal error: finalizer's ExternalPtr doesn't see names in tag"
-msgstr ""
+msgstr "Erro interno: ExternalPtr do finalizador não vê nomes na tag"
 
 #: assign.c:12
 #, c-format
 msgid "Internal error: finalizer sees l=%d, tl=%d"
-msgstr ""
+msgstr "Erro interno: finalizador vê l=%d, tl=%d"
 
 #: assign.c:121
 msgid ""
@@ -39,41 +39,51 @@ msgid ""
 "disk or you've already run setDT(), please report to data.table issue "
 "tracker.\n"
 msgstr ""
+".internal.selfref ptr é NULO. Isso é esperado e normal para um data.table "
+"carregado do disco. Lembre-se de sempre executar setDT() imediatamente após "
+"o carregamento para evitar comportamento inesperado. Se esta tabela não foi "
+"carregada do disco ou você já executou setDT(), informe ao rastreador de "
+"problemas do data.table.\n"
 
 #: assign.c:124
 msgid "Internal error: .internal.selfref ptr is not NULL or R_NilValue"
-msgstr ""
+msgstr "Erro interno: .internal.selfref ptr não é NULL ou R_NilValue"
 
 #: assign.c:126
 msgid "Internal error: .internal.selfref tag isn't NULL or a character vector"
 msgstr ""
+"Erro interno: a tag .internal.selfref não é NULL ou um vetor de caracteres"
 
 #: assign.c:180
 msgid "Internal error: length(names)>0 but <length(dt)"
-msgstr ""
+msgstr "Erro interno: length(names)>0, mas <length(dt)"
 
 #: assign.c:209
 msgid "alloccol has been passed a NULL dt"
-msgstr ""
+msgstr "alloccol recebeu um dt NULL"
 
 #: assign.c:210
 msgid "dt passed to alloccol isn't type VECSXP"
-msgstr ""
+msgstr "dt passado para alloccol não é do tipo VECSXP"
 
 #: assign.c:212
 msgid ""
 "dt passed to alloccol has no class attribute. Please report result of "
 "traceback() to data.table issue tracker."
 msgstr ""
+"dt passado para alloccol não possui nenhum atributo de classe. Por favor, "
+"relate o resultado de traceback() para o rastreador de problemas do data."
+"table."
 
 #: assign.c:217
 #, c-format
 msgid "Internal error: length of names (%d) is not length of dt (%d)"
 msgstr ""
+"Erro interno: o comprimento dos nomes (%d) não é tem o comprimento de dt (%d)"
 
 #: assign.c:227
 msgid "Internal error, tl of class is marked but tl<0."
-msgstr ""
+msgstr "Erro interno, tl da classe está marcado, mas tl<0."
 
 #: assign.c:228
 #, c-format
@@ -81,6 +91,8 @@ msgid ""
 "Internal error, please report (including result of sessionInfo()) to data."
 "table issue tracker: tl (%d) < l (%d) but tl of class is marked."
 msgstr ""
+"Erro interno, relate (incluindo o resultado de sessionInfo()) ao rastreador "
+"de problemas data.table: tl (%d) < l (%d), mas tl da classe está marcado."
 
 #: assign.c:229
 #, c-format
@@ -89,6 +101,9 @@ msgid ""
 "set the datatable.alloccol option to be very large, please report to data."
 "table issue tracker including the result of sessionInfo()."
 msgstr ""
+"tl (%d) é superior a 10.000 itens superalocados (l = %d). Se você não "
+"definiu a opção datatable.alloccol como muito grande, relate ao rastreador "
+"de problemas do data.table incluindo o resultado de sessionInfo()."
 
 #: assign.c:231
 #, c-format
@@ -97,12 +112,17 @@ msgid ""
 "allocation via shallow copy. Please do not use DT[...]<- or DT$someCol<-. "
 "Use := inside DT[...] instead."
 msgstr ""
+"Tentativa de reduzir a alocação de %d para %d foi ignorada. Só é possível "
+"aumentar a alocação por meio de cópia rasa. Por favor, não use DT[...]<- ou "
+"DT$someCol<-. Use := dentro de DT[...] em vez disso."
 
 #: assign.c:239
 msgid ""
 "Has getOption('datatable.alloccol') somehow become unset? It should be a "
 "number, by default 1024."
 msgstr ""
+"GetOption('datatable.alloccol') de alguma forma deixou de estar definido? "
+"Deveria ser um número, por padrão 1024."
 
 #: assign.c:241
 #, c-format
@@ -110,6 +130,8 @@ msgid ""
 "getOption('datatable.alloccol') should be a number, by default 1024. But its "
 "type is '%s'."
 msgstr ""
+"getOption('datatable.alloccol') deveria ser um número, por padrão 1024. Mas "
+"seu tipo é \"%s\"."
 
 #: assign.c:243
 #, c-format
@@ -117,87 +139,110 @@ msgid ""
 "getOption('datatable.alloc') is a numeric vector ok but its length is %d. "
 "Its length should be 1."
 msgstr ""
+"getOption('datatable.alloc') é um vetor numérico, mas seu comprimento é %d. "
+"Seu comprimento deve ser 1."
 
 #: assign.c:246
 #, c-format
 msgid "getOption('datatable.alloc')==%d.  It must be >=0 and not NA."
-msgstr ""
+msgstr "getOption('datatable.alloc')==%d. Deve ser >=0 e não NA."
 
 #: assign.c:251 fsort.c:109
 msgid "verbose must be TRUE or FALSE"
-msgstr ""
+msgstr "verbose deve ser TRUE ou FALSE"
 
+# assign é um termo reservado ou pode traduzir?
 #: assign.c:299
+#, fuzzy
 msgid "assign has been passed a NULL dt"
-msgstr ""
+msgstr "a atribuição passou um dt NULL"
 
+# assign é um termo reservado ou pode traduzir?
 #: assign.c:300
+#, fuzzy
 msgid "dt passed to assign isn't type VECSXP"
-msgstr ""
+msgstr "o dt passado para o assign não é do tipo VECSXP"
 
+# ":= in j" é uma expressão ou pode traduzir o "in"?
 #: assign.c:302
 msgid ""
 ".SD is locked. Updating .SD by reference using := or set are reserved for "
 "future use. Use := in j directly. Or use copy(.SD) as a (slow) last resort, "
 "until shallow() is exported."
 msgstr ""
+".SD está bloqueado. A atualização de .SD por referência usando := ou set "
+"está reservada para uso futuro. Use := em j diretamente. Ou use copy(.SD) "
+"como um como último recurso (lento), até que shallow() seja exportado."
 
 #: assign.c:310
 msgid "Internal error: dt passed to Cassign is not a data.table or data.frame"
-msgstr ""
+msgstr "Erro interno: dt passado para Cassign não é data.table ou data.frame"
 
 #: assign.c:314
 msgid "dt passed to assign has no names"
-msgstr ""
+msgstr "dt passado para assign não tem nomes"
 
+# assign é um termo reservado ou pode traduzir?
 #: assign.c:316
-#, c-format
+#, fuzzy, c-format
 msgid "Internal error in assign: length of names (%d) is not length of dt (%d)"
 msgstr ""
+"Erro interno na atribuição: o comprimento dos nomes (%d) não é o comprimento "
+"de dt (%d)"
 
 #: assign.c:318
 msgid ""
 "data.table is NULL; malformed. A null data.table should be an empty list. "
 "typeof() should always return 'list' for data.table."
 msgstr ""
+"data.table é NULL; malformado. Um data.table nulo deve ser uma lista vazia. "
+"typeof() deve sempre retornar \"list\" para data.table."
 
 #: assign.c:327
 #, c-format
 msgid "Assigning to all %d rows\n"
-msgstr ""
+msgstr "Atribuindo a todas as %d linhas\n"
 
 #: assign.c:332
 msgid ""
 "Coerced i from numeric to integer. Please pass integer for efficiency; e.g., "
 "2L rather than 2"
 msgstr ""
+"Coagido i de numérico para inteiro. Por favor, passe um número inteiro para "
+"obter eficiência; por exemplo, 2L em vez de 2"
 
+# "envolva-e com which()" ficou estranho, poderia melhorar?
 #: assign.c:335
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "i is type '%s'. Must be integer, or numeric is coerced with warning. If i is "
 "a logical subset, simply wrap with which(), and take the which() outside the "
 "loop if possible for efficiency."
 msgstr ""
+"i é do tipo \"%s\". Deve ser inteiro, ou numérico é forçado com aviso. Se i "
+"for um subconjunto lógico, simplesmente envolva-o com which() e coloque "
+"which() fora do laço, se possível, para obter maior eficiência."
 
 #: assign.c:341
 #, c-format
 msgid "i[%d] is %d which is out of range [1,nrow=%d]."
-msgstr ""
+msgstr "i[%d] é %d, o qual está fora do intervalo [1,nrow=%d]."
 
 #: assign.c:344
 #, c-format
 msgid "Assigning to %d row subset of %d rows\n"
-msgstr ""
+msgstr "Atribuindo para %d linha que é subconjunto de %d linhas\n"
 
+# Plural ruim. Relatar o bug para usar ngettext
+# all-NA é uma opção ou pode traduzir?
 #: assign.c:352
-#, c-format
+#, fuzzy, c-format
 msgid "Added %d new column%s initialized with all-NA\n"
-msgstr ""
+msgstr "Adicionada %d nova coluna%s inicializada com all-NA\n"
 
 #: assign.c:357
 msgid "length(LHS)==0; no columns to delete or assign RHS to."
-msgstr ""
+msgstr "length(LHS)==0; nenhuma coluna para excluir ou atribuir RHS."
 
 #: assign.c:371
 msgid ""
@@ -205,12 +250,17 @@ msgid ""
 "Please use a data.table for that. data.table's are over-allocated and don't "
 "shallow copy."
 msgstr ""
+"set() em um data.frame serve para alterar colunas existentes, não para "
+"adicionar novas. Por favor, use um data.table para isso. data.table são "
+"superalocados e não são copiados superficialmente."
 
 #: assign.c:382
 msgid ""
 "Coerced j from numeric to integer. Please pass integer for efficiency; e.g., "
 "2L rather than 2"
 msgstr ""
+"Coagido j de numérico para inteiro. Por favor, passe um número inteiro obter "
+"eficiência; por exemplo, 2L em vez de 2"
 
 #: assign.c:385
 #, c-format
@@ -218,28 +268,36 @@ msgid ""
 "j is type '%s'. Must be integer, character, or numeric is coerced with "
 "warning."
 msgstr ""
+"j é do tipo \"%s\". Deve ser inteiro, caractere ou numérico é coagido com "
+"aviso."
 
 #: assign.c:387
 msgid ""
 "Can't assign to the same column twice in the same query (duplicates "
 "detected)."
 msgstr ""
+"Não é possível atribuir à mesma coluna duas vezes na mesma consulta "
+"(duplicatas detectadas)."
 
 #: assign.c:388
 msgid "newcolnames is supplied but isn't a character vector"
-msgstr ""
+msgstr "newcolnames é fornecido, mas não é um vetor de caracteres"
 
 #: assign.c:390
 #, c-format
 msgid "RHS_list_of_columns == %s\n"
-msgstr ""
+msgstr "RHS_list_of_columns == %s\n"
 
+# unwrap = desembrulhe?
 #: assign.c:395
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "RHS_list_of_columns revised to true because RHS list has 1 item which is "
 "NULL, or whose length %d is either 1 or targetlen (%d). Please unwrap RHS.\n"
 msgstr ""
+"RHS_list_of_columns revisado para verdadeiro porque a lista RHS tem 1 item "
+"que é NULL ou cujo comprimento %d é 1 ou targetlen (%d). Por favor, "
+"desempacote o RHS."
 
 #: assign.c:400
 #, c-format
@@ -248,17 +306,27 @@ msgid ""
 "table or data.frame since they are lists too). To delete multiple columns "
 "use NULL instead. To add multiple empty list columns, use list(list())."
 msgstr ""
+"%d colunas fornecidas para serem atribuídas a uma lista vazia (que pode ser "
+"um data.table ou data.frame vazio, pois também são listas). Para excluir "
+"várias colunas, use NULL. Para adicionar várias colunas de lista vazias, use "
+"list(list()).\t"
 
+# Recycling = Refazendo ciclo de ?
+# unwrap = desembrulhe ?
 #: assign.c:405
-#, c-format
+#, fuzzy, c-format
 msgid "Recycling single RHS list item across %d columns. Please unwrap RHS.\n"
 msgstr ""
+"Refazendo ciclo de um único item da lista RHS em %d colunas. Por favor, "
+"desembrulhe o RHS.\n"
 
 #: assign.c:407
 #, c-format
 msgid ""
 "Supplied %d columns to be assigned %d items. Please see NEWS for v1.12.2."
 msgstr ""
+"Fornecidas %d colunas para serem atribuídos %d itens. Por favor, veja NEWS "
+"para v1.12.2."
 
 #: assign.c:415
 #, c-format
@@ -267,6 +335,9 @@ msgid ""
 "set() on a data.frame is for changing existing columns, not adding new ones. "
 "Please use a data.table for that."
 msgstr ""
+"Item %d da coluna números em j é %d, o que está fora do intervalo [1,"
+"ncol=%d]. set() em um data.frame é para alterar colunas existentes, não para "
+"adicionar novas. Por favor, use um data.table para isso."
 
 #: assign.c:416
 #, c-format
@@ -274,13 +345,16 @@ msgid ""
 "Item %d of column numbers in j is %d which is outside range [1,ncol=%d]. Use "
 "column names instead in j to add new columns."
 msgstr ""
+"Item %d da coluna números em j é %d, o que está fora do intervalo [1,"
+"ncol=%d]. Use nomes de coluna em vez disso em j para adicionar novas colunas."
 
 #: assign.c:421
 msgid "When deleting columns, i should not be provided"
-msgstr ""
+msgstr "Ao excluir colunas, i não deve ser fornecido"
 
+# plonk?
 #: assign.c:427
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "RHS of assignment to existing column '%s' is zero length but not NULL. If "
 "you intend to delete the column use NULL. Otherwise, the RHS must have "
@@ -289,17 +363,25 @@ msgid ""
 "full length RHS vector such as vector('list',nrow(DT)); i.e., 'plonk' in the "
 "new column."
 msgstr ""
+"O RHS da atribuição à coluna existente \"%s\" tem comprimento zero, mas não "
+"é NULL. Se você pretende excluir a coluna, use NULL. Caso contrário, o RHS "
+"deverá ter comprimento > 0; por exemplo, NA_integer_. Se você estiver "
+"tentando alterar o tipo de coluna para uma coluna de lista vazia, como "
+"acontece com todas as alterações de tipo de coluna, forneça um vetor RHS de "
+"comprimento completo, como vector('list',nrow(DT)); ou seja, 'plonk' na nova "
+"coluna."
 
 #: assign.c:432
 #, c-format
 msgid ""
 "Internal error in assign.c: length(newcolnames)=%d, length(names)=%d, coln=%d"
 msgstr ""
+"Erro interno em assign.c: length(newcolnames)=%d, length(names)=%d, coln=%d"
 
 #: assign.c:434
 #, c-format
 msgid "Column '%s' does not exist to remove"
-msgstr ""
+msgstr "A coluna \"%s\" não existe para ser removida"
 
 #: assign.c:440
 #, c-format
@@ -312,14 +394,20 @@ msgid ""
 "Can't assign to column '%s' (type 'factor') a value of type '%s' (not "
 "character, factor, integer or numeric)"
 msgstr ""
+"Não é possível atribuir para a coluna \"%s\" (tipo \"factor\") um valor de "
+"tipo \"%s\" (não um character, factor, integer ou numeric)"
 
+# Qual o contexto e melhor tradução para "recycle"? É a segunda ocorrência.
 #: assign.c:449
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Supplied %d items to be assigned to %d items of column '%s'. If you wish to "
 "'recycle' the RHS please use rep() to make this intent clear to readers of "
 "your code."
 msgstr ""
+"Fornecidos %d itens a serem atribuídos a %d itens da coluna \"%s\". Se você "
+"deseja \"reciclar\" o RHS, use rep() para deixar essa intenção clara para os "
+"leitores do seu código."
 
 #: assign.c:459
 msgid ""
@@ -328,6 +416,10 @@ msgid ""
 "or setalloccol() on it first (to pre-allocate space for new columns) before "
 "assigning by reference to it."
 msgstr ""
+"Este data.table foi carregado do disco (por exemplo, usando readRDS()/"
+"load()) ou construído manualmente (por exemplo, usando Structure()). Execute "
+"setDT() ou setalloccol() nele primeiro (para pré-alocar espaço para novas "
+"colunas) antes de atribuir por referência a ele."
 
 #: assign.c:460
 #, c-format
@@ -335,6 +427,8 @@ msgid ""
 "Internal error: oldtncol(%d) < oldncol(%d). Please report to data.table "
 "issue tracker, including result of sessionInfo()."
 msgstr ""
+"Erro interno: oldncol(%d) < oldncol(%d). Por favor, relate ao rastreador de "
+"problemas do data.table, incluindo o resultado de sessionInfo()."
 
 #: assign.c:462
 #, c-format
