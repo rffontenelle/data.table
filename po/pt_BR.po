@@ -226,7 +226,7 @@ msgstr ""
 #: assign.c:341
 #, c-format
 msgid "i[%d] is %d which is out of range [1,nrow=%d]."
-msgstr "i[%d] é %d, o qual está fora do intervalo [1,nrow=%d]."
+msgstr "i[%d] é %d, o qual está fora da faixa [1,nrow=%d]."
 
 #: assign.c:344
 #, c-format
@@ -335,7 +335,7 @@ msgid ""
 "set() on a data.frame is for changing existing columns, not adding new ones. "
 "Please use a data.table for that."
 msgstr ""
-"Item %d da coluna números em j é %d, o que está fora do intervalo [1,"
+"Item %d da coluna números em j é %d, o que está fora da faixa [1,"
 "ncol=%d]. set() em um data.frame é para alterar colunas existentes, não para "
 "adicionar novas. Por favor, use um data.table para isso."
 
@@ -345,7 +345,7 @@ msgid ""
 "Item %d of column numbers in j is %d which is outside range [1,ncol=%d]. Use "
 "column names instead in j to add new columns."
 msgstr ""
-"Item %d da coluna números em j é %d, o que está fora do intervalo [1,"
+"Item %d da coluna números em j é %d, o que está fora da faixa [1,"
 "ncol=%d]. Use nomes de coluna em vez disso em j para adicionar novas colunas."
 
 #: assign.c:421
@@ -437,184 +437,188 @@ msgid ""
 "See ?truelength. If you didn't set the datatable.alloccol option very large, "
 "please report to data.table issue tracker including the result of "
 "sessionInfo()."
-msgstr ""
+msgstr "truelength (%d) é maior que 10.000 itens superalocados (length = %d). Consulte ?truelength. Se você não definiu a opção datatable.alloccol muito grande, relate no rastreador de problemas do data.table incluindo o resultado de sessionInfo()."
 
 #: assign.c:464
 #, c-format
 msgid ""
 "Internal error: DT passed to assign has not been allocated enough column "
 "slots. l=%d, tl=%d, adding %d"
-msgstr ""
+msgstr "Erro interno: O DT passado para atribuição não recebeu slots de coluna suficientes. l=%d, tl=%d, adicionando %d"
 
 #: assign.c:466
 msgid ""
 "It appears that at some earlier point, names of this data.table have been "
 "reassigned. Please ensure to use setnames() rather than names<- or "
 "colnames<-. Otherwise, please report to data.table issue tracker."
-msgstr ""
+msgstr "Parece que em algum momento anterior, os nomes desta data.table foram reatribuídos. Certifique-se de usar setnames() em vez de names<- ou colnames<-. Caso contrário, informe no rastreador de problemas do data.table."
 
 #: assign.c:470
 #, c-format
 msgid "Internal error: selfrefnames is ok but tl names [%d] != tl [%d]"
-msgstr ""
+msgstr "Erro interno: selfrefnames está ok, mas tl names [%d] != tl [%d]"
 
 #: assign.c:481
 msgid ""
 "Internal error: earlier error 'When deleting columns, i should not be "
 "provided' did not happen."
-msgstr ""
+msgstr "Erro interno: o erro anterior 'Ao excluir colunas, i não deve ser fornecido' não ocorreu."
 
+# plonk?
 #: assign.c:492
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "RHS for item %d has been duplicated because NAMED==%d MAYBE_SHARED==%d, but "
 "then is being plonked. length(values)==%d; length(cols)==%d)\n"
-msgstr ""
+msgstr "RHS para o item %d foi duplicado porque NAMED==%d MAYBE_SHARED==%d, mas depois está sendo plonked. length(values)==%d; length(cols)==%d)\n"
 
+# plonk?
 #: assign.c:497
-#, c-format
+#, fuzzy, c-format
 msgid "Direct plonk of unnamed RHS, no copy. NAMED==%d, MAYBE_SHARED==%d\n"
-msgstr ""
+msgstr "plonk direta de RHS sem nome, sem cópia. NAMED==%d, MAYBE_SHARED==%d\n"
 
 #: assign.c:566
 #, c-format
 msgid ""
 "Dropping index '%s' as it doesn't have '__' at the beginning of its name. It "
 "was very likely created by v1.9.4 of data.table.\n"
-msgstr ""
+msgstr "Descartando o índice \"%s\" porque ele não tem \"__\" no início do nome. Muito provavelmente foi criado pela versão 1.9.4 do data.table.\n"
 
 #: assign.c:574
 msgid "Internal error: index name ends with trailing __"
-msgstr ""
+msgstr "Erro interno: o nome do índice termina com __ à direita"
 
 #: assign.c:579
 msgid "Internal error: Couldn't allocate memory for s4."
-msgstr ""
+msgstr "Erro interno: não foi possível alocar memória para s4."
 
 #: assign.c:590
 msgid "Internal error: Couldn't allocate memory for s5."
-msgstr ""
+msgstr "Erro interno: não foi possível alocar memória para s5."
 
 #: assign.c:611 assign.c:627
 #, c-format
 msgid "Dropping index '%s' due to an update on a key column\n"
-msgstr ""
+msgstr "Descartando o índice \"%s\" devido a uma atualização em uma coluna-chave\n"
 
 #: assign.c:620
 #, c-format
 msgid "Shortening index '%s' to '%s' due to an update on a key column\n"
-msgstr ""
+msgstr "Reduzindo o índice \"%s\" para \"%s\" devido a uma atualização em uma coluna-chave\n"
 
+# Traduzir No-dups ou é uma palavra reservada?
 #: assign.c:650
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Internal error: %d column numbers to delete not now in strictly increasing "
 "order. No-dups were checked earlier."
-msgstr ""
+msgstr "Erro interno: %d números de coluna a serem excluídos agora não estão em ordem estritamente crescente. No-dups foram verificados anteriormente."
 
 #: assign.c:688
 #, c-format
 msgid ""
 "Internal error memrecycle: sourceStart=%d sourceLen=%d length(source)=%d"
-msgstr ""
+msgstr "Erro interno de memrecycle: sourceStart=%d sourceLen=%d length(source)=%d"
 
 #: assign.c:690
 #, c-format
 msgid "Internal error memrecycle: start=%d len=%d length(target)=%d"
-msgstr ""
+msgstr "Erro interno de memrecycle: start=%d len=%d length(target)=%d"
 
+# Tradução de recycle?
 #: assign.c:693
-#, c-format
+#, fuzzy, c-format
 msgid "Internal error: recycle length error not caught earlier. slen=%d len=%d"
-msgstr ""
+msgstr "Erro interno: erro de comprimento de reciclagem não detectado anteriormente. slen=%d len=%d"
 
 #: assign.c:697
 msgid "Internal error: memrecycle has received NULL colname"
-msgstr ""
+msgstr "Erro interno: memrecycle recebeu nome de coluna NULL"
 
 #: assign.c:706
 #, c-format
 msgid ""
 "Cannot assign 'factor' to '%s'. Factors can only be assigned to factor, "
 "character or list columns."
-msgstr ""
+msgstr "Não é possível atribuir \"factor\" a \"%s\". Os fatores só podem ser atribuídos a colunas de fator, caractere ou lista."
 
 #: assign.c:720
 #, c-format
 msgid ""
 "Assigning factor numbers to column %d named '%s'. But %d is outside the "
 "level range [1,%d]"
-msgstr ""
+msgstr "Atribuindo números de fator à coluna %d denominada \"%s\", mas %d está fora da faixa de nível [1,%d]"
 
 #: assign.c:728
 #, c-format
 msgid ""
 "Assigning factor numbers to column %d named '%s'. But %f is outside the "
 "level range [1,%d], or is not a whole number."
-msgstr ""
+msgstr "Atribuindo números de fator à coluna %d denominada \"%s\", mas %f está fora da faixa de nível [1,%d] ou não é um número de todo."
 
 #: assign.c:734
 #, c-format
 msgid ""
 "Cannot assign '%s' to 'factor'. Factor columns can be assigned factor, "
 "character, NA in any type, or level numbers."
-msgstr ""
+msgstr "Não é possível atribuir \"%s\" a \"factor\". As colunas de fator podem receber fator, caractere, NA em qualquer tipo ou números de nível."
 
 #: assign.c:755
 msgid ""
 "Internal error: levels of target are either not unique or have truelength<0"
-msgstr ""
+msgstr "Erro interno: os níveis de destino não são exclusivos ou têm truelength<0"
 
 #: assign.c:794
 #, c-format
 msgid "Unable to allocate working memory of %d bytes to combine factor levels"
-msgstr ""
+msgstr "Não foi possível alocar memória de trabalho de %d bytes para combinar níveis de fator"
 
 #: assign.c:801
 msgid "Internal error: extra level check sum failed"
-msgstr ""
+msgstr "Erro interno: falha na soma de verificação de nível extra"
 
 #: assign.c:820
 #, c-format
 msgid ""
 "Coercing 'character' RHS to '%s' to match the type of the target column "
 "(column %d named '%s')."
-msgstr ""
+msgstr "Forçando RHS \"character\" para \"%s\" para corresponder ao tipo da coluna de destino (coluna %d denominada \"%s\")."
 
 #: assign.c:826
 #, c-format
 msgid ""
 "Cannot coerce 'list' RHS to 'integer64' to match the type of the target "
 "column (column %d named '%s')."
-msgstr ""
+msgstr "Não é possível forçar RHS \"list\" para \"integer64\" para corresponder ao tipo da coluna de destino (coluna %d denominada \"%s\")."
 
 #: assign.c:831
 #, c-format
 msgid ""
 "Coercing 'list' RHS to '%s' to match the type of the target column (column "
 "%d named '%s')."
-msgstr ""
+msgstr "Forçando RHS \"list\" RHS para \"%s\" para corresponder ao tipo da coluna de destino (coluna %d denominada \"%s\")."
 
 #: assign.c:837
 #, c-format
 msgid "Zero-copy coerce when assigning '%s' to '%s' column %d named '%s'.\n"
-msgstr ""
+msgstr "Coerção de cópia zero ao atribuir \"%s\" para \"%s\", coluna %d denominada \"%s\".\n"
 
 #: assign.c:932
 #, c-format
 msgid "type '%s' cannot be coerced to '%s'"
-msgstr ""
+msgstr "o tipo \"%s\" não pode ser coagido para \"%s\""
 
 #: assign.c:1052
 msgid ""
 "To assign integer64 to a character column, please use as.character() for "
 "clarity."
-msgstr ""
+msgstr "Para atribuir inteiro64 a uma coluna de caracteres, use as.character() para maior clareza."
 
 #: assign.c:1064
 #, c-format
 msgid "Unsupported column type in assign.c:memrecycle '%s'"
-msgstr ""
+msgstr "Tipo de coluna não suportado em assign.c:memrecycle \"%s\""
 
 #: assign.c:1111
 #, c-format
