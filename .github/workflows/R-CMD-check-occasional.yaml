@@ -1,4 +1,8 @@
 on:
+  push:
+    branches: master
+  pull_request:
+    branches: master
   schedule:
    - cron: '17 13 28 * *' # 28th of month at 13:17 UTC
 
