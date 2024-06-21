@@ -16,13 +16,17 @@ jobs:
       matrix:
         os: [macOS-latest, windows-latest, ubuntu-latest]
         r: ['devel', 'release', '3.2', '3.3', '3.4', '3.5', '3.6', '4.0', '4.1', '4.2', '4.3']
-        locale: ['en_US.utf8', 'zh_CN.utf8', 'lv_LV.utf8'] # Chinese for translations, Latvian for collate order (#3502)
+        locale: ['en_US.utf8', 'pt_BR.utf8', 'zh_CN.utf8', 'lv_LV.utf8'] # Chinese for translations, Latvian for collate order (#3502)
         exclude:
           # only run non-English locale CI on Ubuntu
+          - os: macOS-latest
+            locale: 'pt_BR.utf8'
           - os: macOS-latest
             locale: 'zh_CN.utf8'
           - os: macOS-latest
             locale: 'lv_LV.utf8'
+          - os: windows-latest
+            locale: 'pt_BR.utf8'
           - os: windows-latest
             locale: 'zh_CN.utf8'
           - os: windows-latest
@@ -53,6 +57,13 @@ jobs:
         run: |
           sudo locale-gen en_US
           echo "LC_ALL=en_US.utf8" >> $GITHUB_ENV
+
+      - name: Set locale
+        if: matrix.locale == 'pt_BR.utf8'
+        run: |
+          sudo locale-gen 'pt_BR.utf8'
+          echo "LC_ALL=pt_BR.utf8" >> $GITHUB_ENV
+          echo "LANGUAGE=pt_BR" >> $GITHUB_ENV
 
       - name: Set locale
         if: matrix.locale == 'zh_CN.utf8'
