@@ -1,21 +1,22 @@
 #
 # Translators:
 # Italo Santos, 2024
-# Leonardo Fontenelle, 2024
+# Leonardo Fontenelle <leonardf@leonardof.med.br>, 2024
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2024
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: data.table 1.15.99\n"
 "POT-Creation-Date: 2024-06-19 20:16+0000\n"
-"PO-Revision-Date: 2024-06-19 20:16+0000\n"
-"Last-Translator: Rafael Fontenelle <rffontenelle@gmail.com>\n"
+"PO-Revision-Date: 2024-06-20 21:02-0300\n"
+"Last-Translator: Leonardo Fontenelle <leonardf@leonardof.med.br>\n"
 "Language-Team: Brazilian Portuguese\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 46.1\n"
 
 #: assign.c:7
 msgid "Internal error: finalizer hasn't received an ExternalPtr"
@@ -38,11 +39,11 @@ msgid ""
 "disk or you've already run setDT(), please report to data.table issue "
 "tracker.\n"
 msgstr ""
-"ptr de .internal.selfref é NULL. Isso é esperado e normal para uma "
-"data.table carregada do disco. Lembre-se de sempre executar setDT() "
-"imediatamente após o carregamento para evitar comportamento inesperado. Se "
-"esta tabela não foi carregada do disco ou você já executou setDT(), por "
-"favor, relate isso no rastreador de problemas do data.table.\n"
+"ptr de .internal.selfref é NULL. Isso é esperado e normal para uma data."
+"table carregada do disco. Lembre-se de sempre executar setDT() imediatamente "
+"após o carregamento para evitar comportamento inesperado. Se esta tabela não "
+"foi carregada do disco ou você já executou setDT(), por favor, relate isso "
+"no rastreador de problemas do data.table.\n"
 
 #: assign.c:124
 msgid "Internal error: .internal.selfref ptr is neither NULL nor R_NilValue"
@@ -66,14 +67,22 @@ msgid ""
 "like grouping and joining may fail. Please consider as.data.table() instead "
 "which will create a new column for each embedded column."
 msgstr ""
+"Algumas colunas são um tipo multicoluna (como uma coluna matrix), por "
+"exemplo a coluna %d. setDT manterá essas colunas como estão, mas operações "
+"subsequentes como agrupar ou unir podem falhar. Por favor, considere usar as."
+"data.table() em vez disso, de forma a criar uma coluna para cada coluna "
+"embutida."
 
 #: assign.c:222
 #, c-format
 msgid ""
-"Column %d has class 'POSIXlt'. Please convert it to POSIXct (using "
-"as.POSIXct) and run setDT() again. We do not recommend the use of POSIXlt at"
-" all because it uses 40 bytes to store one date."
+"Column %d has class 'POSIXlt'. Please convert it to POSIXct (using as."
+"POSIXct) and run setDT() again. We do not recommend the use of POSIXlt at "
+"all because it uses 40 bytes to store one date."
 msgstr ""
+"Coluna %d tem classe 'POSIXlt'. Por favor,  converta-a para POSIXct (usando "
+"as.POSIXct) e execute setDT() novamente. Não recomendamos usar POSIXlt de "
+"forma alguma, porque usa 40 bytes para armazenar uma data."
 
 #: assign.c:239
 #, c-format
@@ -81,6 +90,9 @@ msgid ""
 "All elements in argument 'x' to 'setDT' must be of equal length, but input "
 "%d has length %d whereas the first non-empty input had length %d"
 msgstr ""
+"Todos os elementos no argumento 'x' para 'setDT' devem ser do mesmo "
+"comprimento, mas a entrada %d tem comprimento %d, enquanto a primeira "
+"entrada não vazia tem comprimento %d."
 
 #: assign.c:249
 msgid "alloccol has been passed a NULL dt"
@@ -102,8 +114,7 @@ msgstr ""
 #, c-format
 msgid "Internal error: length of names (%d) is not length of dt (%d)"
 msgstr ""
-"Erro interno: o comprimento dos nomes (%d) não é tem o comprimento de dt "
-"(%d)"
+"Erro interno: o comprimento dos nomes (%d) não é tem o comprimento de dt (%d)"
 
 #: assign.c:267
 msgid "Internal error, tl of class is marked but tl<0."
@@ -112,8 +123,8 @@ msgstr "Erro interno, tl da classe está marcado, mas tl<0."
 #: assign.c:268
 #, c-format
 msgid ""
-"Internal error, please report (including result of sessionInfo()) to "
-"data.table issue tracker: tl (%d) < l (%d) but tl of class is marked."
+"Internal error, please report (including result of sessionInfo()) to data."
+"table issue tracker: tl (%d) < l (%d) but tl of class is marked."
 msgstr ""
 "Erro interno. Por favor, relate isso (incluindo o resultado de "
 "sessionInfo()) no rastreador de problemas data.table: tl (%d) < l (%d), mas "
@@ -123,8 +134,8 @@ msgstr ""
 #, c-format
 msgid ""
 "tl (%d) is greater than 10,000 items over-allocated (l = %d). If you didn't "
-"set the datatable.alloccol option to be very large, please report to "
-"data.table issue tracker including the result of sessionInfo()."
+"set the datatable.alloccol option to be very large, please report to data."
+"table issue tracker including the result of sessionInfo()."
 msgstr ""
 "tl (%d) é superior a 10.000 itens superalocados (l = %d). Se você não "
 "definiu a opção datatable.alloccol como muito grande, relate ao rastreador "
@@ -152,8 +163,8 @@ msgstr ""
 #: assign.c:281
 #, c-format
 msgid ""
-"getOption('datatable.alloccol') should be a number, by default 1024. But its"
-" type is '%s'."
+"getOption('datatable.alloccol') should be a number, by default 1024. But its "
+"type is '%s'."
 msgstr ""
 "getOption('datatable.alloccol') deveria ser um número, por padrão 1024. Mas "
 "seu tipo é '%s'."
@@ -172,10 +183,10 @@ msgstr ""
 msgid "getOption('datatable.alloc')==%d.  It must be >=0 and not NA."
 msgstr "getOption('datatable.alloc')==%d. Deve ser >=0 e não NA."
 
-#: assign.c:292 between.c:16 between.c:22 forder.c:460 forder.c:463
-#: frollR.c:40 frollR.c:94 fsort.c:105 gsumm.c:343 gsumm.c:579 gsumm.c:723
-#: gsumm.c:860 gsumm.c:1016 gsumm.c:1108 nafill.c:103 openmp-utils.c:79
-#: uniqlist.c:354 utils.c:107 utils.c:109
+#: assign.c:292 between.c:16 between.c:22 forder.c:460 forder.c:463 frollR.c:40
+#: frollR.c:94 fsort.c:105 gsumm.c:343 gsumm.c:579 gsumm.c:723 gsumm.c:860
+#: gsumm.c:1016 gsumm.c:1108 nafill.c:103 openmp-utils.c:79 uniqlist.c:354
+#: utils.c:107 utils.c:109
 #, c-format
 msgid "%s must be TRUE or FALSE"
 msgstr "%s deve ser TRUE ou FALSE"
@@ -195,8 +206,8 @@ msgid ""
 "until shallow() is exported."
 msgstr ""
 ".SD é travado. A atualização de .SD por referência usando := ou set está "
-"reservada para uso futuro. Use := em j diretamente. Ou use copy(.SD) como um"
-" último recurso (lento), até que shallow() seja exportado."
+"reservada para uso futuro. Use := em j diretamente. Ou use copy(.SD) como um "
+"último recurso (lento), até que shallow() seja exportado."
 
 #: assign.c:351
 msgid "Internal error: dt passed to Cassign is not a data.table or data.frame"
@@ -211,8 +222,8 @@ msgid ""
 "data.table is NULL; malformed. A null data.table should be an empty list. "
 "typeof() should always return 'list' for data.table."
 msgstr ""
-"data.table é NULL; malformado. Uma data.table nula deve ser uma lista vazia."
-" typeof() deve sempre retornar \"list\" para data.table."
+"data.table é NULL; malformado. Uma data.table nula deve ser uma lista vazia. "
+"typeof() deve sempre retornar \"list\" para data.table."
 
 #: assign.c:369
 #, c-format
@@ -221,8 +232,8 @@ msgstr "Atribuindo a todas as %d linhas\n"
 
 #: assign.c:374
 msgid ""
-"Coerced i from numeric to integer. Please pass integer for efficiency; e.g.,"
-" 2L rather than 2"
+"Coerced i from numeric to integer. Please pass integer for efficiency; e.g., "
+"2L rather than 2"
 msgstr ""
 "Foi feita coerção de i de numérico para inteiro. Por favor, passe um número "
 "inteiro para obter eficiência; por exemplo, 2L em vez de 2"
@@ -230,13 +241,13 @@ msgstr ""
 #: assign.c:377
 #, c-format
 msgid ""
-"i is type '%s'. Must be integer, or numeric is coerced with warning. If i is"
-" a logical subset, simply wrap with which(), and take the which() outside "
-"the loop if possible for efficiency."
+"i is type '%s'. Must be integer, or numeric is coerced with warning. If i is "
+"a logical subset, simply wrap with which(), and take the which() outside the "
+"loop if possible for efficiency."
 msgstr ""
-"i é do tipo '%s'. Deve ser inteiro ou é feita coerção de numérico com aviso."
-" Se i for um subconjunto lógico, simplesmente envolva which() e leve which()"
-" para fora, se possível, para maior eficiência."
+"i é do tipo '%s'. Deve ser inteiro ou é feita coerção de numérico com aviso. "
+"Se i for um subconjunto lógico, simplesmente envolva which() e leve which() "
+"para fora, se possível, para maior eficiência."
 
 #: assign.c:383 subset.c:165
 #, c-format
@@ -261,18 +272,18 @@ msgstr ""
 
 #: assign.c:413
 msgid ""
-"set() on a data.frame is for changing existing columns, not adding new ones."
-" Please use a data.table for that. data.table's are over-allocated and don't"
-" shallow copy."
+"set() on a data.frame is for changing existing columns, not adding new ones. "
+"Please use a data.table for that. data.table's are over-allocated and don't "
+"shallow copy."
 msgstr ""
 "set() em um data.frame serve para alterar colunas existentes, não para "
-"adicionar novas. Por favor, use uma data.table para isso. As data.tables são"
-" superalocadas e não sofrem cópias rasas."
+"adicionar novas. Por favor, use uma data.table para isso. As data.tables são "
+"superalocadas e não sofrem cópias rasas."
 
 #: assign.c:424
 msgid ""
-"Coerced j from numeric to integer. Please pass integer for efficiency; e.g.,"
-" 2L rather than 2"
+"Coerced j from numeric to integer. Please pass integer for efficiency; e.g., "
+"2L rather than 2"
 msgstr ""
 "Foi feita coerção do j de numérico para inteiro. Por favor, passe um número "
 "inteiro obter eficiência; por exemplo, 2L em vez de 2"
@@ -316,15 +327,14 @@ msgstr ""
 #: assign.c:442
 #, c-format
 msgid ""
-"Supplied %d columns to be assigned an empty list (which may be an empty "
-"data.table or data.frame since they are lists too). To delete multiple "
-"columns use NULL instead. To add multiple empty list columns, use "
-"list(list())."
+"Supplied %d columns to be assigned an empty list (which may be an empty data."
+"table or data.frame since they are lists too). To delete multiple columns "
+"use NULL instead. To add multiple empty list columns, use list(list())."
 msgstr ""
 "%d colunas fornecidas para serem atribuídas a uma lista vazia (que pode ser "
 "um data.table ou data.frame vazio, pois também são listas). Para excluir "
-"várias colunas, use NULL. Para adicionar várias colunas de lista vazias, use"
-" list(list())."
+"várias colunas, use NULL. Para adicionar várias colunas de lista vazias, use "
+"list(list())."
 
 #: assign.c:447
 #, c-format
@@ -345,22 +355,21 @@ msgstr ""
 #, c-format
 msgid ""
 "Item %d of column numbers in j is %d which is outside range [1,ncol=%d]. "
-"set() on a data.frame is for changing existing columns, not adding new ones."
-" Please use a data.table for that."
+"set() on a data.frame is for changing existing columns, not adding new ones. "
+"Please use a data.table for that."
 msgstr ""
-"Item %d dos números de coluna em j é %d, o que está fora da faixa "
-"[1,ncol=%d]. set() em um data.frame é para alterar colunas existentes, não "
-"para adicionar novas. Por favor, use uma data.table para isso."
+"Item %d dos números de coluna em j é %d, o que está fora da faixa [1,"
+"ncol=%d]. set() em um data.frame é para alterar colunas existentes, não para "
+"adicionar novas. Por favor, use uma data.table para isso."
 
 #: assign.c:458
 #, c-format
 msgid ""
-"Item %d of column numbers in j is %d which is outside range [1,ncol=%d]. Use"
-" column names instead in j to add new columns."
+"Item %d of column numbers in j is %d which is outside range [1,ncol=%d]. Use "
+"column names instead in j to add new columns."
 msgstr ""
-"Item %d dos números de coluna em j é %d, o que está fora da faixa "
-"[1,ncol=%d]. Use nomes de coluna em vez disso em j para adicionar novas "
-"colunas."
+"Item %d dos números de coluna em j é %d, o que está fora da faixa [1,"
+"ncol=%d]. Use nomes de coluna em vez disso em j para adicionar novas colunas."
 
 #: assign.c:463
 msgid "When deleting columns, i should not be provided"
@@ -373,8 +382,8 @@ msgid ""
 "you intend to delete the column use NULL. Otherwise, the RHS must have "
 "length > 0; e.g., NA_integer_. If you are trying to change the column type "
 "to be an empty list column then, as with all column type changes, provide a "
-"full length RHS vector such as vector('list',nrow(DT)); i.e., 'plonk' in the"
-" new column."
+"full length RHS vector such as vector('list',nrow(DT)); i.e., 'plonk' in the "
+"new column."
 msgstr ""
 "O lado direito (RHS) da atribuição à coluna existente '%s' tem comprimento "
 "zero, mas não é NULL. Se você pretende excluir a coluna, use NULL. Caso "
@@ -387,17 +396,16 @@ msgstr ""
 #: assign.c:474
 #, c-format
 msgid ""
-"Internal error in assign.c: length(newcolnames)=%d, length(names)=%d, "
-"coln=%d"
+"Internal error in assign.c: length(newcolnames)=%d, length(names)=%d, coln=%d"
 msgstr ""
 "Erro interno em assign.c: length(newcolnames)=%d, length(names)=%d, coln=%d"
 
 #: assign.c:476
 #, c-format
 msgid ""
-"Tried to assign NULL to column '%s', but this column does not exist to "
-"remove"
+"Tried to assign NULL to column '%s', but this column does not exist to remove"
 msgstr ""
+"Tentado atribuir NULL a coluna '%s', mas essa coluna não existe para remover"
 
 #: assign.c:484
 #, c-format
@@ -426,15 +434,15 @@ msgstr ""
 
 #: assign.c:505
 msgid ""
-"This data.table has either been loaded from disk (e.g. using "
-"readRDS()/load()) or constructed manually (e.g. using structure()). Please "
-"run setDT() or setalloccol() on it first (to pre-allocate space for new "
-"columns) before assigning by reference to it."
+"This data.table has either been loaded from disk (e.g. using readRDS()/"
+"load()) or constructed manually (e.g. using structure()). Please run setDT() "
+"or setalloccol() on it first (to pre-allocate space for new columns) before "
+"assigning by reference to it."
 msgstr ""
-"Esta data.table foi carregada do disco (por exemplo, usando "
-"readRDS()/load()) ou construída manualmente (por exemplo, usando "
-"structure()). Favor executar setDT() ou setalloccol() nela (para pré-alocar "
-"espaço para novas colunas) antes de atribuir por referência a ela."
+"Esta data.table foi carregada do disco (por exemplo, usando readRDS()/"
+"load()) ou construída manualmente (por exemplo, usando structure()). Favor "
+"executar setDT() ou setalloccol() nela (para pré-alocar espaço para novas "
+"colunas) antes de atribuir por referência a ela."
 
 #: assign.c:506
 #, c-format
@@ -450,8 +458,8 @@ msgstr ""
 #, c-format
 msgid ""
 "truelength (%d) is greater than 10,000 items over-allocated (length = %d). "
-"See ?truelength. If you didn't set the datatable.alloccol option very large,"
-" please report to data.table issue tracker including the result of "
+"See ?truelength. If you didn't set the datatable.alloccol option very large, "
+"please report to data.table issue tracker including the result of "
 "sessionInfo()."
 msgstr ""
 "truelength (%d) é maior que 10.000 itens superalocados (length = %d). "
@@ -490,8 +498,8 @@ msgid ""
 "Internal error: earlier error 'When deleting columns, i should not be "
 "provided' did not happen."
 msgstr ""
-"Erro interno: o erro anterior 'Ao excluir colunas, i não deve ser fornecido'"
-" não ocorreu."
+"Erro interno: o erro anterior 'Ao excluir colunas, i não deve ser fornecido' "
+"não ocorreu."
 
 #: assign.c:547
 #, c-format
@@ -513,8 +521,8 @@ msgstr ""
 #: assign.c:621
 #, c-format
 msgid ""
-"Dropping index '%s' as it doesn't have '__' at the beginning of its name. It"
-" was very likely created by v1.9.4 of data.table.\n"
+"Dropping index '%s' as it doesn't have '__' at the beginning of its name. It "
+"was very likely created by v1.9.4 of data.table.\n"
 msgstr ""
 "Descartando o índice '%s' porque ele não tem '__' no início do nome. Muito "
 "provavelmente foi criado pela versão 1.9.4 do data.table.\n"
@@ -578,11 +586,10 @@ msgstr "Erro interno de memrecycle: start=%d len=%d length(target)=%d"
 
 #: assign.c:754
 #, c-format
-msgid ""
-"Internal error: recycle length error not caught earlier. slen=%d len=%d"
+msgid "Internal error: recycle length error not caught earlier. slen=%d len=%d"
 msgstr ""
-"Erro interno: erro de comprimento de reciclagem não detectado anteriormente."
-" slen=%d len=%d"
+"Erro interno: erro de comprimento de reciclagem não detectado anteriormente. "
+"slen=%d len=%d"
 
 #: assign.c:758
 msgid "Internal error: memrecycle has received NULL colname"
@@ -602,17 +609,17 @@ msgstr ""
 msgid ""
 "Assigning factor numbers to %s. But %d is outside the level range [1,%d]"
 msgstr ""
-"Atribuindo números de fator a %s, mas %d está fora do intervalo de níveis "
-"[1,%d]"
+"Atribuindo números de fator a %s, mas %d está fora do intervalo de níveis [1,"
+"%d]"
 
 #: assign.c:790
 #, c-format
 msgid ""
-"Assigning factor numbers to %s. But %f is outside the level range [1,%d], or"
-" is not a whole number."
+"Assigning factor numbers to %s. But %f is outside the level range [1,%d], or "
+"is not a whole number."
 msgstr ""
-"Atribuindo números de fator a %s, mas %f está fora do intervalo de níveis "
-"[1,%d] ou não é de todo um número."
+"Atribuindo números de fator a %s, mas %f está fora do intervalo de níveis [1,"
+"%d] ou não é de todo um número."
 
 #: assign.c:796
 #, c-format
@@ -620,8 +627,8 @@ msgid ""
 "Cannot assign '%s' to 'factor'. Factor columns can be assigned factor, "
 "character, NA in any type, or level numbers."
 msgstr ""
-"Não é possível atribuir '%s' e 'factor'. As colunas de fator podem receber a"
-" atribuição de fator, caractere, NA em qualquer tipo ou números de nível."
+"Não é possível atribuir '%s' e 'factor'. As colunas de fator podem receber a "
+"atribuição de fator, caractere, NA em qualquer tipo ou números de nível."
 
 #: assign.c:817
 msgid ""
@@ -630,8 +637,7 @@ msgstr ""
 "Erro interno: os níveis de destino não são exclusivos ou têm truelength<0"
 
 #: assign.c:856
-msgid ""
-"Unable to allocate working memory of %zu bytes to combine factor levels"
+msgid "Unable to allocate working memory of %zu bytes to combine factor levels"
 msgstr ""
 "Não foi possível alocar memória de trabalho de %zu bytes para combinar "
 "níveis de fator"
@@ -664,7 +670,7 @@ msgstr ""
 #: assign.c:899
 #, c-format
 msgid "Zero-copy coerce when assigning '%s' to '%s' %s.\n"
-msgstr "Fazendo coerção de zero cópia ao atribuir '%s' a %3$s '%2$s'.\n"
+msgstr "Fazendo coerção de zero cópia ao atribuir '%1$s' a %3$s '%2$s'.\n"
 
 #: assign.c:1001
 #, c-format
@@ -698,8 +704,8 @@ msgstr "Falha ao alocar %d itens iniciais em savetl_init"
 #: assign.c:1261
 #, c-format
 msgid ""
-"Internal error: reached maximum %d items for savetl. Please report to "
-"data.table issue tracker."
+"Internal error: reached maximum %d items for savetl. Please report to data."
+"table issue tracker."
 msgstr ""
 "Erro interno: atingiu o máximo de %d itens para savetl. Por favor, relate "
 "isso no rastreador de problemas do data.table."
@@ -784,8 +790,7 @@ msgstr "processamento paralelo de between de integer64 levou %8.3fs\n"
 
 #: between.c:115
 msgid ""
-"x is not integer64 but lower and/or upper is integer64. Please align "
-"classes."
+"x is not integer64 but lower and/or upper is integer64. Please align classes."
 msgstr ""
 "x não é integer64, mas lower e/ou upper é integer64. Por favor, alinhe as "
 "classes."
@@ -822,8 +827,8 @@ msgstr "processamento não paralelo de between de caractere levou %8.3fs\n"
 #: between.c:190
 #, c-format
 msgid ""
-"Internal error: between.c unsupported type '%s' should have been caught at R"
-" level"
+"Internal error: between.c unsupported type '%s' should have been caught at R "
+"level"
 msgstr ""
 "Erro interno: o tipo '%s' sem suporte no between.c deveria ter sido "
 "detectado a nível de R"
@@ -881,8 +886,7 @@ msgstr "roll é caractere, mas não é 'nearest'"
 
 #: bmerge.c:77
 msgid "roll='nearest' can't be applied to a character column, yet."
-msgstr ""
-"roll='nearest' ainda não pode ser aplicado a uma coluna de caracteres."
+msgstr "roll='nearest' ainda não pode ser aplicado a uma coluna de caracteres."
 
 #: bmerge.c:80
 msgid "Internal error: roll is not character or double"
@@ -919,8 +923,7 @@ msgstr ""
 #: bmerge.c:111
 #, c-format
 msgid "Internal error in bmerge_r for x.'%s'. Unrecognized value op[col]=%d"
-msgstr ""
-"Erro interno em bmerge_r para x.'%s'. Valor não reconhecido op[col]=%d"
+msgstr "Erro interno em bmerge_r para x.'%s'. Valor não reconhecido op[col]=%d"
 
 #: bmerge.c:114
 msgid "Only '==' operator is supported for columns of type character."
@@ -1051,8 +1054,8 @@ msgid ""
 "Item %d is length %d but the first item is length %d. Only singletons are "
 "recycled."
 msgstr ""
-"O item %d tem comprimento %d, mas o primeiro item tem comprimento %d. Apenas"
-" singletons são reciclados."
+"O item %d tem comprimento %d, mas o primeiro item tem comprimento %d. Apenas "
+"singletons são reciclados."
 
 #: coalesce.c:50
 msgid "coalesce copied first item (inplace=FALSE)\n"
@@ -1109,8 +1112,8 @@ msgstr "atributo row.names de .SD não encontrado"
 #: dogroups.c:129
 #, c-format
 msgid ""
-"row.names of .SD isn't integer length 2 with NA as first item; i.e., "
-".set_row_names(). [%s %d %d]"
+"row.names of .SD isn't integer length 2 with NA as first item; i.e., ."
+"set_row_names(). [%s %d %d]"
 msgstr ""
 "row.names de .SD não é um inteiro de comprimento 2 com NA como primeiro "
 "item, ou seja, .set_row_names(). [%s %d %d]"
@@ -1158,29 +1161,35 @@ msgstr "length(xSD)[%d] != length(xjiscols)[%d]"
 #, c-format
 msgid "j evaluates to type '%s'. Must evaluate to atomic vector or list."
 msgstr ""
-"j é avaliado para o tipo '%s'. Deve ser avaliado para vetor atômico ou "
-"lista."
+"j é avaliado para o tipo '%s'. Deve ser avaliado para vetor atômico ou lista."
 
 #: dogroups.c:280
 #, c-format
 msgid ""
-"Entry %d for group %d in j=list(...) should be atomic vector or list. If you"
-" are trying something like j=list(.SD,newcol=mean(colA)) then use := by "
-"group instead (much quicker), or cbind or merge afterwards."
+"Entry %d for group %d in j=list(...) should be atomic vector or list. If you "
+"are trying something like j=list(.SD,newcol=mean(colA)) then use := by group "
+"instead (much quicker), or cbind or merge afterwards."
 msgstr ""
+"Entrada %d para grupo %d em j=list(...) deveria ser um vetor atômico ou "
+"lista. Se você está tentando algo como j=list(.SD,novacol=mean(colA)) então "
+"use := por grupo em vez disso (muito mais rápido), ou cbind ou merge a "
+"seguir."
 
 #: dogroups.c:287
 #, c-format
 msgid ""
 "Entry %d for group %d in j=list(...) is an array with %d dimensions > 1, "
-"which is disallowed. \"Break\" the array yourself with c() or as.vector() if"
-" that is intentional."
+"which is disallowed. \"Break\" the array yourself with c() or as.vector() if "
+"that is intentional."
 msgstr ""
+"Entrada %d para grupo %d em j=list(...) é uma array com %d dimensões > 1, o "
+"que não é permitido. \"Quebre\" a array por conta própria com c() ou as."
+"vector() se isso for intencional."
 
 #: dogroups.c:297
 msgid ""
-"RHS of := is NULL during grouped assignment, but it's not possible to delete"
-" parts of a column."
+"RHS of := is NULL during grouped assignment, but it's not possible to delete "
+"parts of a column."
 msgstr ""
 "O lado direito (RHS) de := é NULL durante a atribuição agrupada, mas não é "
 "possível excluir partes de uma coluna."
@@ -1203,8 +1212,8 @@ msgstr ""
 #: dogroups.c:312
 msgid ""
 "Internal error: Trying to add new column by reference but tl is full; "
-"setalloccol should have run first at R level before getting to this point in"
-" dogroups"
+"setalloccol should have run first at R level before getting to this point in "
+"dogroups"
 msgstr ""
 "Erro interno: Tentando adicionar nova coluna por referência, mas tl está "
 "cheio; setalloccol deveria ter sido executado primeiro no nível R antes de "
@@ -1225,14 +1234,14 @@ msgid ""
 "Column %d of j's result for the first group is NULL. We rely on the column "
 "types of the first result to decide the type expected for the remaining "
 "groups (and require consistency). NULL columns are acceptable for later "
-"groups (and those are replaced with NA of appropriate type and recycled) but"
-" not for the first. Please use a typed empty vector instead, such as "
+"groups (and those are replaced with NA of appropriate type and recycled) but "
+"not for the first. Please use a typed empty vector instead, such as "
 "integer() or numeric()."
 msgstr ""
 "A coluna %d do resultado de j para o primeiro grupo é NULL. Contamos com os "
 "tipos de coluna do primeiro resultado para decidir o tipo esperado para os "
-"grupos restantes (e exigir consistência). Colunas NULL são aceitáveis ​​para"
-" grupos posteriores (e são substituídas por NA do tipo apropriado e "
+"grupos restantes (e exigir consistência). Colunas NULL são aceitáveis ​​para "
+"grupos posteriores (e são substituídas por NA do tipo apropriado e "
 "recicladas), mas não para o primeiro. Em vez disso, use um vetor vazio "
 "tipado, como integer() ou numeric()."
 
@@ -1243,8 +1252,8 @@ msgid ""
 "list (which data.table optimizes) or an unnamed list() instead.\n"
 msgstr ""
 "j parece ser um vetor nomeado. Os mesmos nomes provavelmente serão criados "
-"repetidamente para cada grupo e tornarão as coisas mais lentas. Tente passar"
-" uma lista nomeada (que data.table otimiza) ou uma sem nome usando list().\n"
+"repetidamente para cada grupo e tornarão as coisas mais lentas. Tente passar "
+"uma lista nomeada (que data.table otimiza) ou uma sem nome usando list().\n"
 
 #: dogroups.c:379
 #, c-format
@@ -1262,13 +1271,13 @@ msgstr ""
 msgid ""
 "The result of j is a named list. It's very inefficient to create the same "
 "names over and over again for each group. When j=list(...), any names are "
-"detected, removed and put back after grouping has completed, for efficiency."
-" Using j=transform(), for example, prevents that speedup (consider changing "
+"detected, removed and put back after grouping has completed, for efficiency. "
+"Using j=transform(), for example, prevents that speedup (consider changing "
 "to :=). This message may be upgraded to warning in future.\n"
 msgstr ""
 "O resultado de j é uma lista nomeada. É muito ineficiente criar os mesmos "
-"nomes repetidamente para cada grupo. Quando j=list(...), quaisquer nomes são"
-" detectados, removidos e recolocados após a conclusão do agrupamento, para "
+"nomes repetidamente para cada grupo. Quando j=list(...), quaisquer nomes são "
+"detectados, removidos e recolocados após a conclusão do agrupamento, para "
 "maior eficiência. Usar j=transform(), por exemplo, evita essa aceleração "
 "(considere mudar para :=). Esta mensagem pode ser atualizada para aviso no "
 "futuro.\n"
@@ -1292,8 +1301,8 @@ msgid ""
 "buffer."
 msgstr ""
 "O item %d do resultado de j para o grupo %d tem comprimento zero. Será "
-"preenchido com %d NAs para corresponder à coluna mais longa deste resultado."
-" Os grupos posteriores podem ter um problema semelhante, mas apenas o "
+"preenchido com %d NAs para corresponder à coluna mais longa deste resultado. "
+"Os grupos posteriores podem ter um problema semelhante, mas apenas o "
 "primeiro é relatado para salvar o preenchimento do buffer de avisos."
 
 #: dogroups.c:425
@@ -1302,8 +1311,8 @@ msgid ""
 "Column %d of result for group %d is type '%s' but expecting type '%s'. "
 "Column types must be consistent for each group."
 msgstr ""
-"A coluna %d do resultado do grupo %d é do tipo '%s', mas espera o tipo '%s'."
-" Os tipos de coluna devem ser consistentes para cada grupo."
+"A coluna %d do resultado do grupo %d é do tipo '%s', mas espera o tipo '%s'. "
+"Os tipos de coluna devem ser consistentes para cada grupo."
 
 #: dogroups.c:427
 #, c-format
@@ -1313,8 +1322,8 @@ msgid ""
 "exactly. If you wish to 'recycle' the RHS please use rep() explicitly to "
 "make this intent clear to readers of your code."
 msgstr ""
-"Foram fornecidos %d itens para a coluna %d do grupo %d que possui %d linhas."
-" O comprimento do lado direito (RHS) deve ser 1 (valores únicos são "
+"Foram fornecidos %d itens para a coluna %d do grupo %d que possui %d linhas. "
+"O comprimento do lado direito (RHS) deve ser 1 (valores únicos são "
 "aceitáveis) ou corresponder exatamente ao comprimento do lado esquerdo "
 "(LHS). Se você deseja \"reciclar\" o lado direito (RHS), use rep() "
 "explicitamente para deixar essa intenção clara para os leitores do seu "
@@ -1356,7 +1365,7 @@ msgstr "Erro interno: growVector não oferece suporte ao tipo '%s'"
 #: fastmean.c:39 rbindlist.c:8
 #, c-format
 msgid "%s should be TRUE or FALSE"
-msgstr ""
+msgstr "%s deveria ser TRUE ou FALSE"
 
 #: fastmean.c:45
 #, c-format
@@ -1463,8 +1472,8 @@ msgstr "'no' e 'na' são ambos do tipo fator mas seus níveis são diferentes."
 #, c-format
 msgid ""
 "Received %d inputs; please supply an even number of arguments in ..., "
-"consisting of logical condition, resulting value pairs (in that order). Note"
-" that the default argument must be named explicitly, e.g., default=0"
+"consisting of logical condition, resulting value pairs (in that order). Note "
+"that the default argument must be named explicitly, e.g., default=0"
 msgstr ""
 "%d entradas recebidas; favor fornecer um número par de argumentos em ..., "
 "consistindo pares de condição lógica e valor resultante (nessa ordem). Note "
@@ -1472,11 +1481,11 @@ msgstr ""
 
 #: fifelse.c:218 fifelse.c:258
 msgid ""
-"S4 class objects (except nanotime) are not supported. Please see "
-"https://github.com/Rdatatable/data.table/issues/4131."
+"S4 class objects (except nanotime) are not supported. Please see https://"
+"github.com/Rdatatable/data.table/issues/4131."
 msgstr ""
-"Sem suporte a objetos de classe S4 (exceto nanotime). Favor ver "
-"https://github.com/Rdatatable/data.table/issues/4131."
+"Sem suporte a objetos de classe S4 (exceto nanotime). Favor ver https://"
+"github.com/Rdatatable/data.table/issues/4131."
 
 #: fifelse.c:229
 msgid "Length of 'default' must be 1."
@@ -1488,8 +1497,8 @@ msgid ""
 "Resulting value is of type %s but 'default' is of type %s. Please make sure "
 "that both arguments have the same type."
 msgstr ""
-"Valor resultante é do tipo %s mas 'default' é do tipo %s. Favor garantir que"
-" ambos os argumentos tenham o mesmo tipo."
+"Valor resultante é do tipo %s mas 'default' é do tipo %s. Favor garantir que "
+"ambos os argumentos tenham o mesmo tipo."
 
 #: fifelse.c:240
 msgid ""
@@ -1536,16 +1545,15 @@ msgid ""
 "Argument #%d has different class than argument #2, Please make sure all "
 "output values have the same class."
 msgstr ""
-"Argumento #%d tem classe diferente do argumento #2. Favor garantir que todos"
-" os valores de saída tenham a mesma classe."
+"Argumento #%d tem classe diferente do argumento #2. Favor garantir que todos "
+"os valores de saída tenham a mesma classe."
 
 #: fifelse.c:281
 #, c-format
 msgid ""
 "Argument #2 and argument #%d are both factor but their levels are different."
 msgstr ""
-"Argumento #2 e argumento #%d são ambos fatores mas seus níveis são "
-"diferentes"
+"Argumento #2 e argumento #%d são ambos fatores mas seus níveis são diferentes"
 
 #: fifelse.c:288
 #, c-format
@@ -1581,8 +1589,8 @@ msgid ""
 "Internal error in concat: 'idx' must take values between 1 and length(vec); "
 "1 <= idx <= %d"
 msgstr ""
-"Erro interno em concat: 'idx' deve obter valores entre 1 e length(vec); 1 <="
-" idx <= %d"
+"Erro interno em concat: 'idx' deve obter valores entre 1 e length(vec); 1 <= "
+"idx <= %d"
 
 #: fmelt.c:134
 #, c-format
@@ -1619,9 +1627,9 @@ msgid ""
 "this case are columns [%s]. Consider providing at least one of 'id' or "
 "'measure' vars in future."
 msgstr ""
-"id.vars e measure.vars são adivinhadas internamente quando ambas são 'NULL'."
-" Todas as colunas de tipo não numérico/inteiro/lógico são consideradas "
-"id.vars, o que nesse caso são as colunas [%s]. Considere fornecer ao menos "
+"id.vars e measure.vars são adivinhadas internamente quando ambas são 'NULL'. "
+"Todas as colunas de tipo não numérico/inteiro/lógico são consideradas id."
+"vars, o que nesse caso são as colunas [%s]. Considere fornecer ao menos "
 "argumento dentre id.vars and measure.vars no futuro."
 
 #: fmelt.c:245
@@ -1663,9 +1671,8 @@ msgid ""
 "When 'measure.vars' is either not specified or a character/integer vector, "
 "'value.name' must be a character vector of length =1."
 msgstr ""
-"Quando 'measure.vars' ou não está especificada ou é um vetor de "
-"caracteres/inteiros, 'value.name' deve ser um vetor de caracteres de "
-"comprimento =1."
+"Quando 'measure.vars' ou não está especificada ou é um vetor de caracteres/"
+"inteiros, 'value.name' deve ser um vetor de caracteres de comprimento =1."
 
 #: fmelt.c:317
 msgid "'variable.name' must be a character/integer vector of length 1."
@@ -1687,16 +1694,14 @@ msgid ""
 "number of rows as max length of measure.vars vectors =%d"
 msgstr ""
 "atributo variable_table de measure.vars deveria ser uma data.table com o "
-"mesmo número de linhas que o comprimento máximo dos vetores measure.vars = "
-"%d"
+"mesmo número de linhas que o comprimento máximo dos vetores measure.vars = %d"
 
 #: fmelt.c:379
 msgid ""
 "variable_table attribute of measure.vars should be either NULL or a data "
 "table"
 msgstr ""
-"atributo variable_table de measure.vars deveria ser ou NULL ou uma "
-"data.table"
+"atributo variable_table de measure.vars deveria ser ou NULL ou uma data.table"
 
 #: fmelt.c:396
 msgid ""
@@ -1707,8 +1712,8 @@ msgstr ""
 
 #: fmelt.c:399
 msgid ""
-"Internal error: combineFactorLevels in fmelt.c expects a character target to"
-" factorize"
+"Internal error: combineFactorLevels in fmelt.c expects a character target to "
+"factorize"
 msgstr ""
 "Erro interno: combineFactorLevels em fmelt.c espera alvo de caracteres para "
 "fatorizar"
@@ -1716,10 +1721,10 @@ msgstr ""
 #: fmelt.c:462
 #, c-format
 msgid ""
-"'measure.vars' [%s] are not all of the same type. By order of hierarchy, the"
-" molten data value column will be of type '%s'. All measure variables not of"
-" type '%s' will be coerced too. Check DETAILS in ?melt.data.table for more "
-"on coercion.\n"
+"'measure.vars' [%s] are not all of the same type. By order of hierarchy, the "
+"molten data value column will be of type '%s'. All measure variables not of "
+"type '%s' will be coerced too. Check DETAILS in ?melt.data.table for more on "
+"coercion.\n"
 msgstr ""
 "'measure.vars' [%s] não são todas do mesmo tipo. Por ordem de hierarquia, a "
 "coluna de valores dos dados resultantes será do tipo '%s'. Será feita "
@@ -1750,8 +1755,7 @@ msgstr "Tipo de coluna '%s' desconhecido para a coluna '%s' em 'data'"
 #: fmelt.c:786
 msgid "Input is not of type VECSXP, expected a data.table, data.frame or list"
 msgstr ""
-"Entrada não é do tipo VECSXP, esperava-se uma data.table, data.frame ou "
-"lista"
+"Entrada não é do tipo VECSXP, esperava-se uma data.table, data.frame ou lista"
 
 #: fmelt.c:787
 msgid "Argument 'value.factor' should be logical TRUE/FALSE"
@@ -1779,8 +1783,7 @@ msgstr "Argumento 'verbose' deveria ser lógico TRUE/FALSE"
 
 #: fmelt.c:796
 msgid "ncol(data) is 0. Nothing to melt. Returning original data.table."
-msgstr ""
-"ncol(data) é 0. Nada para processar. Retornando a data.table original."
+msgstr "ncol(data) é 0. Nada para processar. Retornando a data.table original."
 
 #: fmelt.c:801
 msgid "names(data) is NULL. Please report to data.table-help"
@@ -1801,8 +1804,8 @@ msgstr "Falha ao realocar o resultado de tamanho de grupo para %d*4bytes"
 #: forder.c:255
 #, c-format
 msgid ""
-"Logical error. counts[0]=%d in cradix but should have been decremented to 0."
-" radix=%d"
+"Logical error. counts[0]=%d in cradix but should have been decremented to 0. "
+"radix=%d"
 msgstr ""
 "Erro lógico. counts[0]=%d em cradix, mas deveria ter sido decrementado para "
 "0. radix=%d"
@@ -1861,19 +1864,19 @@ msgstr ""
 
 #: forder.c:429
 msgid ""
-"Internal error: input is an atomic vector (not a list of columns) but by= is"
-" not NULL"
+"Internal error: input is an atomic vector (not a list of columns) but by= is "
+"not NULL"
 msgstr ""
 "Erro interno: a entrada é um vetor atômico (não uma lista de colunas), mas "
 "by= não é NULL"
 
 #: forder.c:431
 msgid ""
-"Input is an atomic vector (not a list of columns) but order= is not a length"
-" 1 integer"
+"Input is an atomic vector (not a list of columns) but order= is not a length "
+"1 integer"
 msgstr ""
-"A entrada é um vetor atômico (não uma lista de colunas), mas order= não é um"
-" número inteiro de comprimento 1"
+"A entrada é um vetor atômico (não uma lista de colunas), mas order= não é um "
+"número inteiro de comprimento 1"
 
 #: forder.c:433
 #, c-format
@@ -1900,8 +1903,8 @@ msgstr ""
 #: forder.c:448
 #, c-format
 msgid ""
-"Either order= is not integer or its length (%d) is different to by='s length"
-" (%d)"
+"Either order= is not integer or its length (%d) is different to by='s length "
+"(%d)"
 msgstr ""
 "Ou order= não é inteiro ou seu comprimento (%d) é diferente do comprimento "
 "de by= (%d)"
@@ -1942,16 +1945,19 @@ msgstr "O item %d da ordem (crescente/decrescente) é %d. Deve ser +1 ou -1."
 #, c-format
 msgid ""
 "\n"
-"*** Column %d passed to forder is a date stored as an 8 byte double but no fractions are present. Please consider a 4 byte integer date such as IDate to save space and time.\n"
+"*** Column %d passed to forder is a date stored as an 8 byte double but no "
+"fractions are present. Please consider a 4 byte integer date such as IDate "
+"to save space and time.\n"
 msgstr ""
 "\n"
-"*** A coluna %d passada para forder é uma data armazenada como um double de 8 bytes, mas nenhuma fração está presente. Considere uma data inteira de 4 bytes, como IDate, para economizar espaço e tempo.\n"
+"*** A coluna %d passada para forder é uma data armazenada como um double de "
+"8 bytes, mas nenhuma fração está presente. Considere uma data inteira de 4 "
+"bytes, como IDate, para economizar espaço e tempo.\n"
 
 #: forder.c:554
 #, c-format
 msgid "Column %d passed to [f]order is type '%s', not yet supported."
-msgstr ""
-"A coluna %d passada para [f]order é do tipo '%s', ainda não suportado."
+msgstr "A coluna %d passada para [f]order é do tipo '%s', ainda não suportado."
 
 #: forder.c:707
 msgid "Internal error: column not supported, not caught earlier"
@@ -2042,8 +2048,8 @@ msgstr "Erro interno. Argumento '%s' para %s é do tipo '%s', não '%s'"
 #, c-format
 msgid "Item %d of 'cols' is %d which is outside 1-based range [1,ncol(x)=%d]"
 msgstr ""
-"Item %d de 'cols' é %d, que está fora do intervalo baseado em 1 "
-"[1,ncol(x)=%d]"
+"Item %d de 'cols' é %d, que está fora do intervalo baseado em 1 [1,"
+"ncol(x)=%d]"
 
 #: frank.c:24 frank.c:200
 #, c-format
@@ -2064,8 +2070,8 @@ msgid ""
 "Internal error: invalid ties.method for frankv(), should have been caught "
 "before. please report to data.table issue tracker"
 msgstr ""
-"Erro interno: ties.method inválido para frankv(), deveria ter sido capturado"
-" antes, por favor, relate isso no rastreador de problemas do data.table"
+"Erro interno: ties.method inválido para frankv(), deveria ter sido capturado "
+"antes, por favor, relate isso no rastreador de problemas do data.table"
 
 #: frank.c:177
 #, c-format
@@ -2077,8 +2083,8 @@ msgstr "Erro interno: valor de 'ties' desconhecido em frank: %d"
 msgid ""
 "Internal error in line %d of fread.c, please report on data.table GitHub:  "
 msgstr ""
-"Erro interno na linha %d de fread.c, por favor reporte no repositório GitHub"
-" do data.table:  "
+"Erro interno na linha %d de fread.c, por favor reporte no repositório GitHub "
+"do data.table:  "
 
 #: fread.c:159
 #, c-format
@@ -2129,11 +2135,10 @@ msgstr "  Usando %d threads (omp_get_max_threads()=%d, nth=%d)\n"
 
 #: fread.c:1305
 msgid ""
-"Internal error: NAstrings is itself NULL. When empty it should be pointer to"
-" NULL."
-msgstr ""
-"Erro interno: NAstrings é NULL. Quando vazio, deve ser um ponteiro para "
+"Internal error: NAstrings is itself NULL. When empty it should be pointer to "
 "NULL."
+msgstr ""
+"Erro interno: NAstrings é NULL. Quando vazio, deve ser um ponteiro para NULL."
 
 #: fread.c:1319
 #, c-format
@@ -2238,8 +2243,7 @@ msgstr "Arquivo não encontrado: %s"
 #: fread.c:1400
 #, c-format
 msgid "Opened file ok but couldn't obtain its size: %s"
-msgstr ""
-"Arquivo aberto com sucesso, mas não foi possível obter seu tamanho: %s"
+msgstr "Arquivo aberto com sucesso, mas não foi possível obter seu tamanho: %s"
 
 #: fread.c:1403 fread.c:1435
 #, c-format
@@ -2314,8 +2318,8 @@ msgstr ""
 
 #: fread.c:1480
 msgid ""
-"File is encoded in UTF-16, this encoding is not supported by fread(). Please"
-" recode the file to UTF-8."
+"File is encoded in UTF-16, this encoding is not supported by fread(). Please "
+"recode the file to UTF-8."
 msgstr ""
 "O arquivo está codificado em UTF-16, mas fread() não tem suporte a essa "
 "codificação. Favor recodificar o arquivo para UTF-8."
@@ -2349,8 +2353,8 @@ msgstr ""
 
 #: fread.c:1503
 msgid ""
-"  \\n has been found in the input and different lines can end with different"
-" line endings (e.g. mixed \\n and \\r\\n in one file). This is common and "
+"  \\n has been found in the input and different lines can end with different "
+"line endings (e.g. mixed \\n and \\r\\n in one file). This is common and "
 "ideal.\n"
 msgstr ""
 "  \\n foi encontrado na entrada e linhas diferentes podem terminar com "
@@ -2360,8 +2364,8 @@ msgstr ""
 #: fread.c:1527
 #, c-format
 msgid ""
-"  File ends abruptly with '%c'. Final end-of-line is missing. Using cow page"
-" to write 0 to the last byte.\n"
+"  File ends abruptly with '%c'. Final end-of-line is missing. Using cow page "
+"to write 0 to the last byte.\n"
 msgstr ""
 "  O arquivo termina abruptamente com '%c'. Um fim de linha ao final está "
 "faltando. Usando a página de cópia na gravação (COW) para escrever 0 no "
@@ -2375,8 +2379,8 @@ msgid ""
 msgstr ""
 "Este arquivo é muito incomum: termina abruptamente sem uma nova linha final "
 "e também seu tamanho é um múltiplo de 4096 bytes. Por favor, termine "
-"corretamente a última linha com uma nova linha usando, por exemplo, 'echo >>"
-" arquivo' para evitar isto "
+"corretamente a última linha com uma nova linha usando, por exemplo, 'echo >> "
+"arquivo' para evitar isto "
 
 #: fread.c:1534
 #, c-format
@@ -2395,14 +2399,14 @@ msgid ""
 "skip='%s' not found in input (it is case sensitive and literal; i.e., no "
 "patterns, wildcards or regex)"
 msgstr ""
-"skip='%s' não encontrado na entrada (diferencia maiúsculas de minúsculas e é"
-" literal; ou seja, sem padrões, caracteres curingas ou regex)"
+"skip='%s' não encontrado na entrada (diferencia maiúsculas de minúsculas e é "
+"literal; ou seja, sem padrões, caracteres curingas ou regex)"
 
 #: fread.c:1580
 #, c-format
 msgid ""
-"Found skip='%s' on line %<PRIu64>. Taking this to be header row or first row"
-" of data.\n"
+"Found skip='%s' on line %<PRIu64>. Taking this to be header row or first row "
+"of data.\n"
 msgstr ""
 "skip='%s' encontrado na linha %<PRIu64>. Considerando isso como linha de "
 "cabeçalho ou primeira linha de dados.\n"
@@ -2419,11 +2423,11 @@ msgstr "skip=%<PRIu64>, mas a entrada tem apenas %<PRIu64> linha%s"
 
 #: fread.c:1603
 msgid ""
-"Input is either empty, fully whitespace, or skip has been set after the last"
-" non-whitespace."
+"Input is either empty, fully whitespace, or skip has been set after the last "
+"non-whitespace."
 msgstr ""
-"A entrada está vazia, totalmente com espaço em branco ou o pulo foi definido"
-" após o último caractere diferente de espaço em branco."
+"A entrada está vazia, totalmente com espaço em branco ou o pulo foi definido "
+"após o último caractere diferente de espaço em branco."
 
 #: fread.c:1605
 #, c-format
@@ -2469,16 +2473,16 @@ msgid ""
 "  No sep and quote rule found a block of 2x2 or greater. Single column "
 "input.\n"
 msgstr ""
-"  Nenhum sep e regra de aspas encontrou um bloco de 2x2 ou maior. Entrada de"
-" coluna única.\n"
+"  Nenhum sep e regra de aspas encontrou um bloco de 2x2 ou maior. Entrada de "
+"coluna única.\n"
 
 #: fread.c:1761
 msgid ""
 "Single column input contains invalid quotes. Self healing only effective "
 "when ncol>1"
 msgstr ""
-"Entrada de coluna única contém aspas inválidas. A autorreparação só é eficaz"
-" quando ncol>1"
+"Entrada de coluna única contém aspas inválidas. A autorreparação só é eficaz "
+"quando ncol>1"
 
 #: fread.c:1766
 #, c-format
@@ -2487,8 +2491,8 @@ msgid ""
 "quoted (e.g. field separator does not appear within any field), try "
 "quote=\"\" to avoid this warning."
 msgstr ""
-"Foram encontradas e resolvidas aspas inadequadas nas primeiras %d linhas. Se"
-" os campos não estiverem entre aspas (por exemplo, o separador de campo não "
+"Foram encontradas e resolvidas aspas inadequadas nas primeiras %d linhas. Se "
+"os campos não estiverem entre aspas (por exemplo, o separador de campo não "
 "aparece em nenhum campo), tente quote=\"\" para evitar este aviso."
 
 #: fread.c:1782
@@ -2527,12 +2531,11 @@ msgstr "  fill=%s e o maior número de colunas encontradas é %d\n"
 #: fread.c:1796
 msgid ""
 "This file is very unusual: it's one single column, ends with 2 or more end-"
-"of-line (representing several NA at the end), and is a multiple of 4096, "
-"too."
+"of-line (representing several NA at the end), and is a multiple of 4096, too."
 msgstr ""
 "Este arquivo é muito incomum: é uma única coluna, termina com 2 ou mais "
-"finais de linha (representando vários NA no final) e também é um múltiplo de"
-" 4096."
+"finais de linha (representando vários NA no final) e também é um múltiplo de "
+"4096."
 
 #: fread.c:1797
 #, c-format
@@ -2544,15 +2547,16 @@ msgid ""
 "  1-column file ends with 2 or more end-of-line. Restoring last eol using "
 "extra byte in cow page.\n"
 msgstr ""
-"  O arquivo de 1 coluna termina com 2 ou mais finais de linha. Restaurando o"
-" último fim de linha usando byte extra na página de cópia na gravação "
-"(cow).\n"
+"  O arquivo de 1 coluna termina com 2 ou mais finais de linha. Restaurando o "
+"último fim de linha usando byte extra na página de cópia na gravação (cow).\n"
 
 #: fread.c:1822
 msgid ""
 "[07] Detect column types, dec, good nrow estimate and whether first row is "
 "column names\n"
 msgstr ""
+"[07] Detectar tipos de coluna, dec, boa estimativa de nrow e se a primeira "
+"linha são nomes de coluna\n"
 
 #: fread.c:1823
 #, c-format
@@ -2566,7 +2570,7 @@ msgstr "Falha ao alocar 2 x %d bytes para type e tmpType: %s"
 
 #: fread.c:1831
 msgid "  sep=',' so dec set to '.'\n"
-msgstr ""
+msgstr "  sep=',', então dec definido para '.'\n"
 
 #: fread.c:1855
 #, c-format
@@ -2618,7 +2622,7 @@ msgstr ""
 #: fread.c:1921 fread.c:1947
 #, c-format
 msgid "  dec='%c' detected based on a balance of %d parsed fields\n"
-msgstr ""
+msgstr "  dec='%c' detectado com base em um balanço de %d campos analisados\n"
 
 #: fread.c:1931
 #, c-format
@@ -2628,8 +2632,8 @@ msgstr "  Códigos de tipos (pulo %03d)       : %s Regra de pulo %d\n"
 #: fread.c:1953
 #, c-format
 msgid ""
-"  'header' determined to be true due to column %d containing a string on row"
-" 1 and a lower type (%s) in the rest of the %<PRId64> sample rows\n"
+"  'header' determined to be true due to column %d containing a string on row "
+"1 and a lower type (%s) in the rest of the %<PRId64> sample rows\n"
 msgstr ""
 "  'header' determinado como sendo verdadeiro devido à coluna %d conter uma "
 "string na linha 1 e um tipo inferior (%s) no restante das %<PRId64> linhas "
@@ -2648,8 +2652,8 @@ msgid ""
 "Internal error: ch!=pos after counting fields in the line before the first "
 "data row."
 msgstr ""
-"Erro interno: ch!=pos após contar os campos na linha antes da primeira linha"
-" de dados."
+"Erro interno: ch!=pos após contar os campos na linha antes da primeira linha "
+"de dados."
 
 #: fread.c:1967
 #, c-format
@@ -2734,8 +2738,8 @@ msgid ""
 "  'header' determined to be false because there are some number columns and "
 "those columns do not have a string field at the top of them\n"
 msgstr ""
-"  'header' determinado como falso porque existem algumas colunas numéricas e"
-" essas colunas não possuem um campo de string no topo delas\n"
+"  'header' determinado como falso porque existem algumas colunas numéricas e "
+"essas colunas não possuem um campo de string no topo delas\n"
 
 #: fread.c:2019
 #, c-format
@@ -2748,8 +2752,8 @@ msgid ""
 "  All rows were sampled since file is small so we know nrow=%<PRIu64> "
 "exactly\n"
 msgstr ""
-"  Todas as linhas foram amostradas porque o arquivo é pequeno, então sabemos"
-" exatamente nrow=%<PRIu64>\n"
+"  Todas as linhas foram amostradas porque o arquivo é pequeno, então sabemos "
+"exatamente nrow=%<PRIu64>\n"
 
 #: fread.c:2040 fread.c:2047
 msgid "  =====\n"
@@ -2785,11 +2789,11 @@ msgstr "  Número estimado de linhas: %<PRIu64> / %.2f = %<PRIu64>\n"
 #: fread.c:2045
 #, c-format
 msgid ""
-"  Initial alloc = %<PRIu64> rows (%<PRIu64> + %d%%) using "
-"bytes/max(mean-2*sd,min) clamped between [1.1*estn, 2.0*estn]\n"
+"  Initial alloc = %<PRIu64> rows (%<PRIu64> + %d%%) using bytes/"
+"max(mean-2*sd,min) clamped between [1.1*estn, 2.0*estn]\n"
 msgstr ""
-"  Alocação inicial = %<PRIu64> linhas (%<PRIu64> + %d%%) usando "
-"bytes/max(mean-2*sd,min) clampeados entre [1.1*estn, 2.0*estn]\n"
+"  Alocação inicial = %<PRIu64> linhas (%<PRIu64> + %d%%) usando bytes/"
+"max(mean-2*sd,min) clampeados entre [1.1*estn, 2.0*estn]\n"
 
 #: fread.c:2049
 #, c-format
@@ -2878,8 +2882,7 @@ msgstr "Erro interno: A thread mestre não é a thread 0, mas a thread %d.\n"
 #: fread.c:2444
 #, c-format
 msgid ""
-"Column %d%s%.*s%s bumped from '%s' to '%s' due to <<%.*s>> on row "
-"%<PRIu64>\n"
+"Column %d%s%.*s%s bumped from '%s' to '%s' due to <<%.*s>> on row %<PRIu64>\n"
 msgstr ""
 "Coluna %d%s%.*s%s passou de '%s' para '%s' devido a <<%.*s>> na linha "
 "%<PRIu64>\n"
@@ -2897,11 +2900,13 @@ msgstr ""
 #, c-format
 msgid "  Provided number of fill columns: %d but only found %d\n"
 msgstr ""
+"  Fornecido número de colunas para preenchimento: %d, mas foram encontradas "
+"apenas %d\n"
 
 #: fread.c:2563
 #, c-format
 msgid "  Dropping %d overallocated columns\n"
-msgstr ""
+msgstr "  Descartando %d colunas sobrealocadas\n"
 
 #: fread.c:2586
 #, c-format
@@ -2956,6 +2961,9 @@ msgid ""
 "fill=%d or even more based on your knowledge of the input file. First "
 "discarded non-empty line: <<%s>>"
 msgstr ""
+"Parou cedo na linha %<PRIu64>. %d campos esperados, mas foram encontrados "
+"%d. Considere fill=%d ou mais com base em seu conhecimento do arquivo de "
+"entrada. Primeira linha descartada não vazia: <<%s>>"
 
 #: fread.c:2683
 #, c-format
@@ -2976,8 +2984,8 @@ msgid ""
 msgstr ""
 "Encontradas e resolvidas aspas inadequadas fora da amostra. Primeira linha "
 "corrigida %<PRIu64>: <<%s>>. Se os campos não estiverem entre aspas (por "
-"exemplo, o separador de campo não aparece em nenhum campo), tente quote=\"\""
-" para evitar este aviso."
+"exemplo, o separador de campo não aparece em nenhum campo), tente quote=\"\" "
+"para evitar este aviso."
 
 #: fread.c:2694
 msgid "=============================\n"
@@ -3017,19 +3025,19 @@ msgstr ""
 #: fread.c:2706
 #, c-format
 msgid ""
-"%8.3fs (%3.0f%%) Reading %d chunks (%d swept) of %.3fMB (each chunk %d rows)"
-" using %d threads\n"
+"%8.3fs (%3.0f%%) Reading %d chunks (%d swept) of %.3fMB (each chunk %d rows) "
+"using %d threads\n"
 msgstr ""
-"%8.3fs (%3.0f%%) Lendo %d pedaços (%d percorridos) de %.3fMB (cada pedaço %d"
-" linhas) usando %d threads\n"
+"%8.3fs (%3.0f%%) Lendo %d pedaços (%d percorridos) de %.3fMB (cada pedaço %d "
+"linhas) usando %d threads\n"
 
 #: fread.c:2708
 #, c-format
 msgid ""
 "   + %8.3fs (%3.0f%%) Parse to row-major thread buffers (grown %d times)\n"
 msgstr ""
-"   + %8.3fs (%3.0f%%) Analisar para buffers de thread com ordem principal de"
-" linha (aumentados %d vezes)\n"
+"   + %8.3fs (%3.0f%%) Analisar para buffers de thread com ordem principal de "
+"linha (aumentados %d vezes)\n"
 
 #: fread.c:2709
 #, c-format
@@ -3074,7 +3082,8 @@ msgstr "freadR.c recebeu um nome de arquivo: %s\n"
 
 #: freadR.c:96
 msgid "freadR.c has been passed the data as text input (not a filename)\n"
-msgstr "freadR.c recebeu os dados como entrada de texto (não nome de arquivo)\n"
+msgstr ""
+"freadR.c recebeu os dados como entrada de texto (não nome de arquivo)\n"
 
 #: freadR.c:102
 msgid ""
@@ -3087,8 +3096,7 @@ msgstr ""
 msgid ""
 "Internal error: freadR dec not a single character. R level catches this."
 msgstr ""
-"Erro interno: dec de freadR não é um único caractere. O nível R captura "
-"isso."
+"Erro interno: dec de freadR não é um único caractere. O nível R captura isso."
 
 #: freadR.c:114
 msgid "quote= must be a single character, blank \"\", or FALSE"
@@ -3192,14 +3200,14 @@ msgstr "Erro interno: typeSize[CT_STRING] != 1"
 msgid ""
 "Column name '%s' not found in column name header (case sensitive), skipping."
 msgstr ""
-"Nome de coluna '%s' não encontrado no cabeçalho de nome de colunas (sensível"
-" a maiúsculas), pulando."
+"Nome de coluna '%s' não encontrado no cabeçalho de nome de colunas (sensível "
+"a maiúsculas), pulando."
 
 #: freadR.c:298
 #, c-format
 msgid ""
-"Column number %d (select[%d]) is negative but should be in the range "
-"[1,ncol=%d]. Consider drop= for column exclusion."
+"Column number %d (select[%d]) is negative but should be in the range [1,"
+"ncol=%d]. Consider drop= for column exclusion."
 msgstr ""
 "Número de coluna %d (select[%d]) é negativo mas deveria estar no intervalo "
 "[1,ncol=%d]. Considere drop= para exclusão de coluna."
@@ -3216,8 +3224,8 @@ msgstr ""
 #: freadR.c:300
 #, c-format
 msgid ""
-"Column number %d (select[%d]) is too large for this table, which only has %d"
-" columns."
+"Column number %d (select[%d]) is too large for this table, which only has %d "
+"columns."
 msgstr ""
 "Número de coluna %d (select[%d]) é grande demais para esta tabela, que só "
 "tem %d colunas."
@@ -3301,8 +3309,8 @@ msgstr "%s"
 #, c-format
 msgid "%s: window width longer than input vector, returning all NA vector\n"
 msgstr ""
-"%s: largura da janela maior do que o vetor de entrada, retornando vetor todo"
-" NA\n"
+"%s: largura da janela maior do que o vetor de entrada, retornando vetor todo "
+"NA\n"
 
 #: froll.c:32 froll.c:240 froll.c:456
 #, c-format
@@ -3396,11 +3404,11 @@ msgstr "%s: levou %.3fs\n"
 
 #: frollR.c:17
 msgid ""
-"x must be of type numeric or logical, or a list, data.frame or data.table of"
-" such"
+"x must be of type numeric or logical, or a list, data.frame or data.table of "
+"such"
 msgstr ""
-"x deve ser do tipo numérico ou lógico, ou uma lista, data.frame ou "
-"data.table com colunas assim "
+"x deve ser do tipo numérico ou lógico, ou uma lista, data.frame ou data."
+"table com colunas assim "
 
 #: frollR.c:37 frollR.c:242
 msgid "n must be non 0 length"
@@ -3464,9 +3472,9 @@ msgid ""
 "separately"
 msgstr ""
 "A função móvel adaptativa só pode processar 'x' com elementos de igual "
-"comprimento, como data.table ou data.frame. Se você quiser chamar uma função"
-" móvel em uma lista com elementos de comprimento variável, chame-a para cada"
-" elemento separadamente"
+"comprimento, como data.table ou data.frame. Se você quiser chamar uma função "
+"móvel em uma lista com elementos de comprimento variável, chame-a para cada "
+"elemento separadamente"
 
 #: frollR.c:127
 msgid ""
@@ -3528,7 +3536,8 @@ msgstr "erro interno: 'rho' deve ser um ambiente"
 #: frolladaptive.c:29 frolladaptive.c:218
 #, c-format
 msgid "%s: running for input length %<PRIu64>, hasna %d, narm %d\n"
-msgstr "%s: execução para entrada de comprimento %<PRIu64>, hasna %d, narm %d\n"
+msgstr ""
+"%s: execução para entrada de comprimento %<PRIu64>, hasna %d, narm %d\n"
 
 #: frolladaptive.c:35 frolladaptive.c:224
 #, c-format
@@ -3549,26 +3558,26 @@ msgstr ""
 
 #: fsort.c:107
 msgid "x must be a vector of type double currently"
-msgstr ""
+msgstr "x deve ser atualmente um vetor do tipo 'double'"
 
 #: fsort.c:118
 #, c-format
 msgid "nth=%d, nBatch=%d\n"
-msgstr ""
+msgstr "nth=%d, nBatch=%d\n"
 
 #: fsort.c:152
 #, c-format
 msgid "Range = [%g,%g]\n"
-msgstr ""
+msgstr "Intervalo = [%g,%g]\n"
 
 #: fsort.c:153
 msgid "Cannot yet handle negatives."
-msgstr ""
+msgstr "Não é possível lidar com negativos."
 
 #: fsort.c:168
 #, c-format
 msgid "maxBit=%d; MSBNbits=%d; shift=%d; MSBsize=%zu\n"
-msgstr ""
+msgstr "maxBit=%d; MSBNbits=%d; shift=%d; MSBsize=%zu\n"
 
 #: fsort.c:174
 #, c-format
@@ -3576,19 +3585,21 @@ msgid ""
 "counts is %dMB (%d pages per nBatch=%d, batchSize=%<PRIu64>, "
 "lastBatchSize=%<PRIu64>)\n"
 msgstr ""
+"\"counts\" é %dMB (%d páginas por nBatch=%d, batchSize=%<PRIu64>, "
+"lastBatchSize=%<PRIu64>)\n"
 
 #: fsort.c:228
 msgid "Internal error: counts[nBatch-1][MSBsize-1] != length(x)"
-msgstr ""
+msgstr "Erro interno: counts[nBatch-1][MSBsize-1] != length(x)"
 
 #: fsort.c:244
 msgid "Top 20 MSB counts: "
-msgstr ""
+msgstr "Maiores 20 contagens MSB: "
 
 #: fsort.c:244
 #, c-format
 msgid "%<PRId64> "
-msgstr ""
+msgstr "%<PRId64> "
 
 #: fsort.c:244 fwrite.c:706
 msgid "\n"
@@ -3596,11 +3607,11 @@ msgstr "\n"
 
 #: fsort.c:245
 msgid "Reduced MSBsize from %zu to "
-msgstr ""
+msgstr "MSBsize reduzido de %zu para "
 
 #: fsort.c:249
 msgid "%zu by excluding 0 and 1 counts\n"
-msgstr ""
+msgstr "%zu excluindo contagens 0 e 1\n"
 
 #: fsort.c:315
 #, c-format
@@ -3608,15 +3619,17 @@ msgid ""
 "OpenMP %d did not assign threads to iterations monotonically. Please search "
 "Stack Overflow for this message."
 msgstr ""
+"OpenMP %d não designou threads para iterações monotonicamente. Por favor, "
+"pesquise no Stack Overflow para esta mensagem."
 
 #: fsort.c:317
 msgid "Unable to allocate working memory"
-msgstr ""
+msgstr "Não foi possível alocar memória de trabalho"
 
 #: fsort.c:327
 #, c-format
 msgid "%d: %.3f (%4.1f%%)\n"
-msgstr ""
+msgstr "%d: %.3f (%4.1f%%)\n"
 
 #: fwrite.c:611
 #, c-format
@@ -3625,10 +3638,11 @@ msgstr "buffMB=%d fora do intervalo [1,1024]"
 
 #: fwrite.c:618
 #, c-format
-msgid "eol must be 1 or more bytes (usually either \\n or \\r\\n) but is length %d"
+msgid ""
+"eol must be 1 or more bytes (usually either \\n or \\r\\n) but is length %d"
 msgstr ""
-"eol deve ter 1 ou mais bytes (geralmente \\n ou \\r\\n), mas tem comprimento"
-" %d"
+"eol deve ter 1 ou mais bytes (geralmente \\n ou \\r\\n), mas tem comprimento "
+"%d"
 
 #: fwrite.c:621
 msgid "Column writers: "
@@ -3647,10 +3661,12 @@ msgstr "... "
 #, c-format
 msgid ""
 "\n"
-"args.doRowNames=%d args.rowNames=%p args.rowNameFun=%d doQuote=%d args.nrow=%<PRId64> args.ncol=%d eolLen=%d\n"
+"args.doRowNames=%d args.rowNames=%p args.rowNameFun=%d doQuote=%d args."
+"nrow=%<PRId64> args.ncol=%d eolLen=%d\n"
 msgstr ""
 "\n"
-"args.doRowNames=%d args.rowNames=%p args.rowNameFun=%d doQuote=%d args.nrow=%<PRId64> args.ncol=%d eolLen=%d\n"
+"args.doRowNames=%d args.rowNames=%p args.rowNameFun=%d doQuote=%d args."
+"nrow=%<PRId64> args.ncol=%d eolLen=%d\n"
 
 #: fwrite.c:664
 #, c-format
@@ -3677,12 +3693,12 @@ msgstr ""
 #: fwrite.c:692
 #, c-format
 msgid ""
-"%s: '%s'. Unable to create new file for writing (it does not exist already)."
-" Do you have permission to write here, is there space on the disk and does "
+"%s: '%s'. Unable to create new file for writing (it does not exist already). "
+"Do you have permission to write here, is there space on the disk and does "
 "the path exist?"
 msgstr ""
-"%s: '%s'. Não foi possível criar um novo arquivo para escrita (ele ainda não"
-" existe). Você tem permissão para escrever aqui, há espaço no disco e o "
+"%s: '%s'. Não foi possível criar um novo arquivo para escrita (ele ainda não "
+"existe). Você tem permissão para escrever aqui, há espaço no disco e o "
 "caminho existe?"
 
 #: fwrite.c:699
@@ -3693,8 +3709,8 @@ msgid ""
 msgstr ""
 "Compressão em fwrite usa a biblioteca zlib. Seus arquivos de cabeçalho não "
 "foram encontrados no momento em que o data.table foi compilado. Para "
-"habilitar a compressão em fwrite, por favor, reinstale o data.table e estude"
-" a saída para obter mais orientações."
+"habilitar a compressão em fwrite, por favor, reinstale o data.table e estude "
+"a saída para obter mais orientações."
 
 #: fwrite.c:704
 #, c-format
@@ -3752,8 +3768,8 @@ msgstr "zbuffSize=%d retornado de deflateBound\n"
 #: fwrite.c:823
 #, c-format
 msgid ""
-"Unable to allocate %zu MB * %d thread buffers; '%d: %s'. Please read ?fwrite"
-" for nThread, buffMB and verbose options."
+"Unable to allocate %zu MB * %d thread buffers; '%d: %s'. Please read ?fwrite "
+"for nThread, buffMB and verbose options."
 msgstr ""
 "Não foi possível alocar %zu MB * %d buffers de thread; '%d: %s'. Por favor, "
 "leia ?fwrite para as opções nThread, buffMB e verbose."
@@ -3764,8 +3780,8 @@ msgid ""
 "Unable to allocate %zu MB * %d thread compressed buffers; '%d: %s'. Please "
 "read ?fwrite for nThread, buffMB and verbose options."
 msgstr ""
-"Não foi possível alocar %zu MB * %d buffers comprimidos de thread; '%d: %s'."
-" Por favor, leia ?fwrite para as opções nThread, buffMB e verbose."
+"Não foi possível alocar %zu MB * %d buffers comprimidos de thread; '%d: %s'. "
+"Por favor, leia ?fwrite para as opções nThread, buffMB e verbose."
 
 #: fwrite.c:1009
 #, c-format
@@ -3778,8 +3794,8 @@ msgstr ""
 
 #: fwrite.c:1011
 msgid ""
-"Please include the full output above and below this message in your "
-"data.table bug report."
+"Please include the full output above and below this message in your data."
+"table bug report."
 msgstr ""
 "Por favor, inclua a saída completa acima e abaixo desta mensagem no seu "
 "relatório de bug do data.table."
@@ -3826,8 +3842,8 @@ msgstr ""
 msgid ""
 "fwrite must be passed an object of type list; e.g. data.frame, data.table"
 msgstr ""
-"fwrite deve receber um objeto do tipo list; por exemplo, data.frame, "
-"data.table"
+"fwrite deve receber um objeto do tipo list; por exemplo, data.frame, data."
+"table"
 
 #: fwriteR.c:186
 msgid "fwrite was passed an empty list of no columns. Nothing to write."
@@ -3850,6 +3866,8 @@ msgid ""
 "input has specific integer rownames but their length (%lld) != nrow "
 "(%<PRId64>)"
 msgstr ""
+"entrada tem nomes de linha inteiros específicos, mas seu comprimento (%lld) !"
+"= nrow (%<PRId64>)"
 
 #: fwriteR.c:283
 msgid ""
@@ -3871,11 +3889,11 @@ msgstr ""
 #: fwriteR.c:291
 #, c-format
 msgid ""
-"sep ('%c'), sep2 ('%c') and dec ('%c') must all be different. Column %d is a"
-" list column."
+"sep ('%c'), sep2 ('%c') and dec ('%c') must all be different. Column %d is a "
+"list column."
 msgstr ""
-"sep ('%c'), sep2 ('%c') e dec ('%c') devem ser todos diferentes. Coluna %d é"
-" uma coluna de lista."
+"sep ('%c'), sep2 ('%c') e dec ('%c') devem ser todos diferentes. Coluna %d é "
+"uma coluna de lista."
 
 #: gsumm.c:45 gsumm.c:46 gsumm.c:47
 #, c-format
@@ -3967,8 +3985,8 @@ msgid ""
 "convenience."
 msgstr ""
 "A soma de uma coluna de inteiros para um grupo foi maior do que o tipo "
-"'integer' pode suportar, então foi feita coerção do resultado para 'numeric'"
-" automaticamente por conveniência."
+"'integer' pode suportar, então foi feita coerção do resultado para 'numeric' "
+"automaticamente por conveniência."
 
 #: gsumm.c:566 gsumm.c:838 gsumm.c:904 gsumm.c:1090 gsumm.c:1161
 #, c-format
@@ -3986,30 +4004,26 @@ msgstr "Este gmean levou (narm=%s) ..."
 
 #: gsumm.c:619 gsumm.c:676
 #, c-format
-msgid ""
-"Unable to allocate %d * %zu bytes for non-NA counts in gmean na.rm=TRUE"
+msgid "Unable to allocate %d * %zu bytes for non-NA counts in gmean na.rm=TRUE"
 msgstr ""
-"Não foi possível alocar %d * %zu bytes para contagens não-NA em gmean "
-"na.rm=TRUE"
+"Não foi possível alocar %d * %zu bytes para contagens não-NA em gmean na."
+"rm=TRUE"
 
 #: gsumm.c:712
 #, c-format
 msgid ""
-"Type '%s' not supported by GForce mean (gmean). Either add the prefix "
-"base::mean(.) or turn off GForce optimization using "
-"options(datatable.optimize=1)"
+"Type '%s' not supported by GForce mean (gmean). Either add the prefix base::"
+"mean(.) or turn off GForce optimization using options(datatable.optimize=1)"
 msgstr ""
-"Tipo '%s' não é suportado pelo GForce mean (gmean). Adicione o prefixo "
-"base::mean(.) ou desative a otimização GForce usando "
-"options(datatable.optimize=1)"
+"Tipo '%s' não é suportado pelo GForce mean (gmean). Adicione o prefixo base::"
+"mean(.) ou desative a otimização GForce usando options(datatable.optimize=1)"
 
 #: gsumm.c:724
 msgid ""
 "GForce min/max can only be applied to columns, not .SD or similar. To find "
-"min/max of all items in a list such as .SD, either add the prefix "
-"base::min(.SD) or turn off GForce optimization using "
-"options(datatable.optimize=1). More likely, you may be looking for "
-"'DT[,lapply(.SD,min),by=,.SDcols=]'"
+"min/max of all items in a list such as .SD, either add the prefix base::min(."
+"SD) or turn off GForce optimization using options(datatable.optimize=1). "
+"More likely, you may be looking for 'DT[,lapply(.SD,min),by=,.SDcols=]'"
 msgstr ""
 "GForce min/max só pode ser aplicado a colunas, não a .SD ou similar. Para "
 "encontrar min/max de todos os itens em uma lista, como .SD, adicione o "
@@ -4024,10 +4038,10 @@ msgstr "Tipo 'complex' não tem min/max bem definidos"
 #: gsumm.c:861
 msgid ""
 "GForce median can only be applied to columns, not .SD or similar. To find "
-"median of all items in a list such as .SD, either add the prefix "
-"stats::median(.SD) or turn off GForce optimization using "
-"options(datatable.optimize=1). More likely, you may be looking for "
-"'DT[,lapply(.SD,median),by=,.SDcols=]'"
+"median of all items in a list such as .SD, either add the prefix stats::"
+"median(.SD) or turn off GForce optimization using options(datatable."
+"optimize=1). More likely, you may be looking for 'DT[,lapply(.SD,median),"
+"by=,.SDcols=]'"
 msgstr ""
 "GForce median só pode ser aplicado a colunas, não a .SD ou similar. Para "
 "encontrar a mediana de todos os itens em uma lista como .SD, adicione o "
@@ -4041,8 +4055,7 @@ msgstr "Erro interno: gfirstlast headw só deve ser true quando w>1"
 
 #: gsumm.c:965
 #, c-format
-msgid ""
-"Internal error: unanticipated case in gfirstlast first=%d w=%d headw=%d"
+msgid "Internal error: unanticipated case in gfirstlast first=%d w=%d headw=%d"
 msgstr "Erro interno: caso não previsto em gfirstlast first=%d w=%d headw=%d"
 
 #: gsumm.c:979
@@ -4062,8 +4075,8 @@ msgid ""
 "caught before. please report to data.table issue tracker."
 msgstr ""
 "Erro interno, gtail só está implementado para n>0. Isso deveria ter sido "
-"detectado antes. Por favor, relate isso no rastreador de problemas do "
-"data.table."
+"detectado antes. Por favor, relate isso no rastreador de problemas do data."
+"table."
 
 #: gsumm.c:1007
 msgid ""
@@ -4073,8 +4086,8 @@ msgid ""
 msgstr ""
 "Erro interno, `g[` (gnthvalue) só está implementado para subconjuntos de "
 "valor único com índice positivo, por exemplo, .SD[2]. Isso deveria ter sido "
-"detectado antes. Por favor, relate isso no rastreador de problemas do "
-"data.table."
+"detectado antes. Por favor, relate isso no rastreador de problemas do data."
+"table."
 
 #: gsumm.c:1017
 msgid ""
@@ -4088,9 +4101,9 @@ msgstr ""
 "GForce var/sd só pode ser aplicado a colunas, não a .SD ou similar. Para a "
 "matriz de covariância completa de todos os itens em uma lista como .SD, "
 "adicione o prefixo stats::var(.SD) (ou stats::sd(.SD)) ou desative a "
-"otimização GForce usando options(datatable.optimize=1). Alternativamente, se"
-" você precisar apenas dos elementos diagonais, "
-"'DT[,lapply(.SD,var),by=,.SDcols=]' é a maneira otimizada de fazer isso."
+"otimização GForce usando options(datatable.optimize=1). Alternativamente, se "
+"você precisar apenas dos elementos diagonais, 'DT[,lapply(.SD,var),by=,."
+"SDcols=]' é a maneira otimizada de fazer isso."
 
 #: gsumm.c:1111
 msgid ""
@@ -4100,10 +4113,10 @@ msgid ""
 "likely, you may be looking for 'DT[,lapply(.SD,prod),by=,.SDcols=]'"
 msgstr ""
 "GForce prod só pode ser aplicado a colunas, não a .SD ou similar. Para "
-"multiplicar todos os itens em uma lista como .SD, adicione o prefixo "
-"base::prod(.SD) ou desative a otimização GForce usando "
-"options(datatable.optimize=1). Mais provavelmente, você pode estar "
-"procurando por 'DT[,lapply(.SD,prod),by=,.SDcols=]'"
+"multiplicar todos os itens em uma lista como .SD, adicione o prefixo base::"
+"prod(.SD) ou desative a otimização GForce usando options(datatable."
+"optimize=1). Mais provavelmente, você pode estar procurando por 'DT[,lapply(."
+"SD,prod),by=,.SDcols=]'"
 
 #: gsumm.c:1119
 #, c-format
@@ -4121,8 +4134,8 @@ msgid ""
 "please report to data.table issue tracker"
 msgstr ""
 "Erro interno: tipo inválido para gshift(), deveria ter sido detectado "
-"anteriormente. Por favor, relate isso no rastreador de problemas do "
-"data.table."
+"anteriormente. Por favor, relate isso no rastreador de problemas do data."
+"table."
 
 #: gsumm.c:1207
 msgid "Internal error: n must be integer"
@@ -4136,8 +4149,8 @@ msgstr "Item %d de n é NA"
 #: gsumm.c:1266
 #, c-format
 msgid ""
-"Type '%s' is not supported by GForce gshift. Either add the namespace prefix"
-" (e.g. data.table::shift(.)) or turn off GForce optimization using "
+"Type '%s' is not supported by GForce gshift. Either add the namespace prefix "
+"(e.g. data.table::shift(.)) or turn off GForce optimization using "
 "options(datatable.optimize=1)"
 msgstr ""
 "Tipo '%s' não é suportado pelo GForce gshift. Adicione o prefixo do "
@@ -4205,8 +4218,7 @@ msgstr ""
 
 #: ijoin.c:160
 #, c-format
-msgid ""
-"Internal error: unknown type lookup should have been caught earlier: %d"
+msgid "Internal error: unknown type lookup should have been caught earlier: %d"
 msgstr ""
 "Erro interno: a pesquisa de type desconhecido deveria ter sido detectada "
 "anteriormente: %d"
@@ -4266,8 +4278,8 @@ msgstr ""
 #: init.c:179
 msgid "... failed. Please forward this message to maintainer('data.table')."
 msgstr ""
-"... falhou. Por favor, encaminhe esta mensagem para o "
-"maintainer('data.table')."
+"... falhou. Por favor, encaminhe esta mensagem para o maintainer('data."
+"table')."
 
 #: init.c:180
 #, c-format
@@ -4279,8 +4291,8 @@ msgstr "Verificando se NA_INTEGER [%d] == INT_MIN [%d] %s"
 msgid "Checking NA_INTEGER [%d] == NA_LOGICAL [%d] %s"
 msgstr "Verificando se NA_INTEGER [%d] == NA_LOGICAL [%d] %s"
 
-#: init.c:182 init.c:183 init.c:185 init.c:188 init.c:189 init.c:190
-#: init.c:191 init.c:192 init.c:193 init.c:194
+#: init.c:182 init.c:183 init.c:185 init.c:188 init.c:189 init.c:190 init.c:191
+#: init.c:192 init.c:193 init.c:194
 #, c-format
 msgid "Checking sizeof(%s) [%zu] is %d %s"
 msgstr "Verificando se sizeof(%s) [%zu] é %d %s"
@@ -4312,11 +4324,9 @@ msgstr "Verificando se memset(&i,0,sizeof(int)); i == (int)0 %s"
 
 #: init.c:209
 #, c-format
-msgid ""
-"Checking memset(&ui, 0, sizeof(unsigned int)); ui == (unsigned int)0 %s"
+msgid "Checking memset(&ui, 0, sizeof(unsigned int)); ui == (unsigned int)0 %s"
 msgstr ""
-"Verificando se memset(&ui, 0, sizeof(unsigned int)); ui == (unsigned int)0 "
-"%s"
+"Verificando se memset(&ui, 0, sizeof(unsigned int)); ui == (unsigned int)0 %s"
 
 #: init.c:212
 #, c-format
@@ -4325,11 +4335,9 @@ msgstr "Verificando se memset(&d, 0, sizeof(double)); d == (double)0.0 %s"
 
 #: init.c:215
 #, c-format
-msgid ""
-"Checking memset(&ld, 0, sizeof(long double)); ld == (long double)0.0 %s"
+msgid "Checking memset(&ld, 0, sizeof(long double)); ld == (long double)0.0 %s"
 msgstr ""
-"Verificando se memset(&ld, 0, sizeof(long double)); ld == (long double)0.0 "
-"%s"
+"Verificando se memset(&ld, 0, sizeof(long double)); ld == (long double)0.0 %s"
 
 #: init.c:218
 msgid "The ascii character '/' is not just before '0'"
@@ -4385,8 +4393,8 @@ msgstr ".Last.value no namespace não é um inteiro de comprimento 1"
 
 #: nafill.c:110
 msgid ""
-"'x' argument is atomic vector, in-place update is supported only for "
-"list/data.table"
+"'x' argument is atomic vector, in-place update is supported only for list/"
+"data.table"
 msgstr ""
 "argumento 'x' é um vetor atômico, a atualização no local é suportada apenas "
 "para list/data.table"
@@ -4400,8 +4408,7 @@ msgstr ""
 #: nafill.c:179
 msgid "fill must be a vector of length 1 or a list of length of x"
 msgstr ""
-"fill deve ser um vetor de comprimento 1 ou uma lista de comprimento igual a "
-"x"
+"fill deve ser um vetor de comprimento 1 ou uma lista de comprimento igual a x"
 
 #: nafill.c:187
 msgid "internal error: 'fill' should be recycled as list already"
@@ -4419,8 +4426,8 @@ msgid ""
 "characters that are not a digit [0-9]. See ?data.table::setDTthreads."
 msgstr ""
 "Ignorando %s==\"%s\" inválido. Não é um inteiro >= 1. Por favor, remova "
-"quaisquer caracteres que não sejam um dígito [0-9]. Veja "
-"?data.table::setDTthreads."
+"quaisquer caracteres que não sejam um dígito [0-9]. Veja ?data.table::"
+"setDTthreads."
 
 #: openmp-utils.c:44
 #, c-format
@@ -4434,7 +4441,8 @@ msgstr ""
 #: openmp-utils.c:82
 msgid ""
 "This installation of data.table has not been compiled with OpenMP support.\n"
-msgstr "Esta instalação do data.table não foi compilada com suporte a OpenMP.\n"
+msgstr ""
+"Esta instalação do data.table não foi compilada com suporte a OpenMP.\n"
 
 #: openmp-utils.c:84
 #, c-format
@@ -4488,7 +4496,8 @@ msgstr "  RestoreAfterFork               %s\n"
 
 #: openmp-utils.c:98
 #, c-format
-msgid "  data.table is using %d threads with throttle==%d. See ?setDTthreads.\n"
+msgid ""
+"  data.table is using %d threads with throttle==%d. See ?setDTthreads.\n"
 msgstr ""
 "  data.table está usando %d threads com throttle==%d. Veja ?setDTthreads.\n"
 
@@ -4519,16 +4528,15 @@ msgid ""
 "Internal error: threads==%d should be between 2 and 100 (percent=TRUE at C "
 "level)."
 msgstr ""
-"Erro interno: threads==%d deve estar entre 2 e 100 (percent=TRUE no nível "
-"C)."
+"Erro interno: threads==%d deve estar entre 2 e 100 (percent=TRUE no nível C)."
 
 #: programming.c:16
 #, c-format
 msgid ""
-"Attempting to substitute '%s' element with object of type '%s' but it has to"
-" be 'symbol' type when substituting name of the call argument, functions "
-"'as.name' and 'I' can be used to work out proper substitution, see "
-"?substitute2 examples."
+"Attempting to substitute '%s' element with object of type '%s' but it has to "
+"be 'symbol' type when substituting name of the call argument, functions 'as."
+"name' and 'I' can be used to work out proper substitution, see ?substitute2 "
+"examples."
 msgstr ""
 "Tentativa de substituir o elemento '%s' com um objeto do tipo '%s', mas ele "
 "precisa ser do tipo 'symbol' quando substituir o nome do argumento da "
@@ -4541,11 +4549,11 @@ msgstr "use.names= deve ser TRUE, FALSE ou não usado (\"check\" por padrão)"
 
 #: rbindlist.c:12
 msgid ""
-"Input to rbindlist must be a list. This list can contain data.tables, "
-"data.frames or plain lists."
+"Input to rbindlist must be a list. This list can contain data.tables, data."
+"frames or plain lists."
 msgstr ""
-"Entrada para rbindlist deve ser uma lista. Esta lista pode conter "
-"data.tables, data.frames ou listas simples."
+"Entrada para rbindlist deve ser uma lista. Esta lista pode conter data."
+"tables, data.frames ou listas simples."
 
 #: rbindlist.c:19
 msgid "Internal error: rbindlist.c idcol is not a single string"
@@ -4562,8 +4570,8 @@ msgid ""
 "Item %d has %d columns, inconsistent with item %d which has %d columns. To "
 "fill missing columns use fill=TRUE."
 msgstr ""
-"Item %d tem %d colunas, inconsistente com o item %d que tem %d colunas. Para"
-" preencher colunas ausentes, use fill=TRUE."
+"Item %d tem %d colunas, inconsistente com o item %d que tem %d colunas. Para "
+"preencher colunas ausentes, use fill=TRUE."
 
 #: rbindlist.c:41
 #, c-format
@@ -4623,17 +4631,17 @@ msgstr "Falha ao alocar ncol=%d itens de memória de trabalho em rbindlist.c"
 
 #: rbindlist.c:190
 msgid ""
-"Internal error: usenames==NA but fill=TRUE. usenames should have been set to"
-" TRUE earlier with warning."
+"Internal error: usenames==NA but fill=TRUE. usenames should have been set to "
+"TRUE earlier with warning."
 msgstr ""
 "Erro interno: usenames==NA, mas fill=TRUE. usenames deveria ter sido "
 "definido como TRUE anteriormente com um aviso."
 
 #: rbindlist.c:195
 msgid ""
-" use.names='check' (default from v1.12.2) emits this message and proceeds as"
-" if use.names=FALSE for  backwards compatibility. See news item 5 in v1.12.2"
-" for options to control this message."
+" use.names='check' (default from v1.12.2) emits this message and proceeds as "
+"if use.names=FALSE for  backwards compatibility. See news item 5 in v1.12.2 "
+"for options to control this message."
 msgstr ""
 " use.names='check' (padrão a partir da v1.12.2) emite esta mensagem e "
 "prossegue como se use.names=FALSE para compatibilidade retroativa. Veja o "
@@ -4651,8 +4659,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Column %d ['%s'] of item %d is missing in item %d. Use fill=TRUE to fill "
-"with NA (NULL for list columns), or use.names=FALSE to ignore column "
-"names.%s"
+"with NA (NULL for list columns), or use.names=FALSE to ignore column names.%s"
 msgstr ""
 "Coluna %d ['%s'] do item %d está ausente no item %d. Use fill=TRUE para "
 "preencher com NA (NULL para colunas de lista) ou use.names=FALSE para "
@@ -4670,13 +4677,13 @@ msgstr ""
 #: rbindlist.c:218
 #, c-format
 msgid ""
-"Column %d ['%s'] of item %d appears in position %d in item %d. Set "
-"use.names=TRUE to match by column name, or use.names=FALSE to ignore column "
+"Column %d ['%s'] of item %d appears in position %d in item %d. Set use."
+"names=TRUE to match by column name, or use.names=FALSE to ignore column "
 "names.%s"
 msgstr ""
-"Coluna %d ['%s'] do item %d aparece na posição %d no item %d. Defina "
-"use.names=TRUE para corresponder pelo nome da coluna ou use.names=FALSE para"
-" ignorar os nomes das colunas.%s"
+"Coluna %d ['%s'] do item %d aparece na posição %d no item %d. Defina use."
+"names=TRUE para corresponder pelo nome da coluna ou use.names=FALSE para "
+"ignorar os nomes das colunas.%s"
 
 #: rbindlist.c:227
 msgid ""
@@ -4738,10 +4745,10 @@ msgid ""
 "factor levels should be an ordered subset of the first longest. A regular "
 "factor will be created for this column."
 msgstr ""
-"Coluna %d do item %d é um fator ordenado, mas o nível %d ['%s'] está ausente"
-" nos níveis ordenados da coluna %d do item %d. Cada conjunto de níveis de "
-"fator ordenado deve ser um subconjunto ordenado do primeiro e mais longo. Um"
-" fator regular será criado para esta coluna."
+"Coluna %d do item %d é um fator ordenado, mas o nível %d ['%s'] está ausente "
+"nos níveis ordenados da coluna %d do item %d. Cada conjunto de níveis de "
+"fator ordenado deve ser um subconjunto ordenado do primeiro e mais longo. Um "
+"fator regular será criado para esta coluna."
 
 #: rbindlist.c:389
 #, c-format
@@ -4825,13 +4832,12 @@ msgstr "dt passada para setcolorder não tem nomes"
 #: reorder.c:113
 #, c-format
 msgid "Internal error: dt passed to setcolorder has %d columns but %d names"
-msgstr ""
-"Erro interno: dt passada para setcolorder tem %d colunas, mas %d nomes"
+msgstr "Erro interno: dt passada para setcolorder tem %d colunas, mas %d nomes"
 
 #: shift.c:12
 msgid ""
-"shift input must not be matrix or array, consider wrapping it into "
-"data.table() or c()"
+"shift input must not be matrix or array, consider wrapping it into data."
+"table() or c()"
 msgstr ""
 "entrada de shift não deve ser uma matriz ou array, considere envolvê-la em "
 "data.table() ou c()"
@@ -4839,11 +4845,10 @@ msgstr ""
 #: shift.c:17
 #, c-format
 msgid ""
-"type '%s' passed to shift(). Must be a vector, list, data.frame or "
-"data.table"
+"type '%s' passed to shift(). Must be a vector, list, data.frame or data.table"
 msgstr ""
-"tipo '%s' passado para shift(). Deve ser um vetor, lista, data.frame ou "
-"data.table"
+"tipo '%s' passado para shift(). Deve ser um vetor, lista, data.frame ou data."
+"table"
 
 #: shift.c:24 shift.c:29
 msgid ""
@@ -4851,8 +4856,8 @@ msgid ""
 "please report to data.table issue tracker"
 msgstr ""
 "Erro interno: tipo inválido para shift(), deveria ter sido detectado "
-"anteriormente. Por favor, relate isso no rastreador de problemas do "
-"data.table."
+"anteriormente. Por favor, relate isso no rastreador de problemas do data."
+"table."
 
 #: shift.c:32
 msgid "Internal error: k must be integer"
@@ -4882,9 +4887,9 @@ msgid ""
 "Internal error: column type '%s' not supported by data.table subset. All "
 "known types are supported so please report as bug."
 msgstr ""
-"Erro interno: tipo de coluna '%s' não suportado pelo subconjunto do "
-"data.table. Todos os tipos conhecidos são suportados, por favor, reporte "
-"isso como um bug."
+"Erro interno: tipo de coluna '%s' não suportado pelo subconjunto do data."
+"table. Todos os tipos conhecidos são suportados, por favor, reporte isso "
+"como um bug."
 
 #: subset.c:135
 #, c-format
@@ -4959,11 +4964,11 @@ msgstr ""
 #: subset.c:258
 #, c-format
 msgid ""
-"Column %d ['%s'] is length %d but column 1 is length %d; malformed "
-"data.table."
+"Column %d ['%s'] is length %d but column 1 is length %d; malformed data."
+"table."
 msgstr ""
-"Coluna %d ['%s'] tem comprimento %d, mas a coluna 1 tem comprimento %d; "
-"data.table malformada."
+"Coluna %d ['%s'] tem comprimento %d, mas a coluna 1 tem comprimento %d; data."
+"table malformada."
 
 #: subset.c:290
 #, c-format
@@ -4999,8 +5004,8 @@ msgid ""
 "keep.names should be either NULL, or the name of the first column of the "
 "result in which to place the names of the input"
 msgstr ""
-"keep.names deve ser NULL ou o nome da primeira coluna do resultado no qual e"
-" colocado os nomes da entrada."
+"keep.names deve ser NULL ou o nome da primeira coluna do resultado no qual e "
+"colocado os nomes da entrada."
 
 #: transpose.c:19
 msgid "fill must be a length 1 vector, such as the default NA"
@@ -5008,12 +5013,12 @@ msgstr "fill deve ser um vetor de comprimento 1, como o padrão NA"
 
 #: transpose.c:22
 msgid "list.cols should be logical TRUE/FALSE."
-msgstr ""
+msgstr "list.cols deveria ser lógico TRUE/FALSE."
 
 #: transpose.c:31
 #, c-format
 msgid "Item %d of list input is not either an atomic vector, or a list"
-msgstr ""
+msgstr "Item %d da lista de entrada não é nem um vetor atômico, nem uma lista"
 
 #: types.c:55
 msgid "internal error: status, nx, nk must be integer"
@@ -5033,8 +5038,7 @@ msgstr "Erro interno: uniqlist recebeu uma ordem de comprimento 0"
 
 #: uniqlist.c:19
 #, c-format
-msgid ""
-"Internal error: uniqlist has been passed length(order)==%d but nrow==%d"
+msgid "Internal error: uniqlist has been passed length(order)==%d but nrow==%d"
 msgstr "Erro interno: uniqlist recebeu length(order)==%d, mas nrow==%d"
 
 #: uniqlist.c:151
@@ -5046,8 +5050,8 @@ msgstr ""
 msgid ""
 "Input argument 'n' to 'uniqlengths' must be an integer vector of length 1"
 msgstr ""
-"Argumento de entrada 'n' para 'uniqlengths' deve ser um vetor de inteiros de"
-" comprimento 1"
+"Argumento de entrada 'n' para 'uniqlengths' deve ser um vetor de inteiros de "
+"comprimento 1"
 
 #: uniqlist.c:170 uniqlist.c:267
 msgid "cols must be an integer vector with length >= 1"
@@ -5093,8 +5097,8 @@ msgstr "argumento 'x' deve ser compatível com data.table"
 
 #: utils.c:129
 msgid ""
-"argument specifying columns is type 'double' and one or more items in it are"
-" not whole integers"
+"argument specifying columns is type 'double' and one or more items in it are "
+"not whole integers"
 msgstr ""
 "argumento que especifica colunas é do tipo 'double' e um ou mais itens nele "
 "não são inteiros completos"
@@ -5184,17 +5188,17 @@ msgstr "x e len devem ter o mesmo comprimento"
 msgid ""
 "Join results in more than 2^31 rows (internal vecseq reached physical "
 "limit). Very likely misspecified join. Check for duplicate key values in i "
-"each of which join to the same group in x over and over again. If that's ok,"
-" try by=.EACHI to run j for each group to avoid the large allocation. "
+"each of which join to the same group in x over and over again. If that's ok, "
+"try by=.EACHI to run j for each group to avoid the large allocation. "
 "Otherwise, please search for this error message in the FAQ, Wiki, Stack "
 "Overflow and data.table issue tracker for advice."
 msgstr ""
 "A junção resulta em mais de 2^31 linhas (vecseq interno atingiu o limite "
 "físico). Muito provavelmente, a junção foi especificada incorretamente. "
-"Verifique se há valores de chave duplicados em i, cada um dos quais se junta"
-" ao mesmo grupo em x repetidamente. Se estiver correto, tente by=.EACHI para"
-" executar j para cada grupo e evitar uma grande alocação. Caso contrário, "
-"por favor, procure esta mensagem de erro no FAQ, Wiki, Stack Overflow e "
+"Verifique se há valores de chave duplicados em i, cada um dos quais se junta "
+"ao mesmo grupo em x repetidamente. Se estiver correto, tente by=.EACHI para "
+"executar j para cada grupo e evitar uma grande alocação. Caso contrário, por "
+"favor, procure esta mensagem de erro no FAQ, Wiki, Stack Overflow e "
 "rastreador de problemas do data.table para obter conselhos."
 
 #: vecseq.c:25
@@ -5208,18 +5212,18 @@ msgstr "clamp deve ser positivo"
 #: vecseq.c:28
 #, c-format
 msgid ""
-"Join results in %d rows; more than %d = nrow(x)+nrow(i). Check for duplicate"
-" key values in i each of which join to the same group in x over and over "
+"Join results in %d rows; more than %d = nrow(x)+nrow(i). Check for duplicate "
+"key values in i each of which join to the same group in x over and over "
 "again. If that's ok, try by=.EACHI to run j for each group to avoid the "
-"large allocation. If you are sure you wish to proceed, rerun with "
-"allow.cartesian=TRUE. Otherwise, please search for this error message in the"
-" FAQ, Wiki, Stack Overflow and data.table issue tracker for advice."
+"large allocation. If you are sure you wish to proceed, rerun with allow."
+"cartesian=TRUE. Otherwise, please search for this error message in the FAQ, "
+"Wiki, Stack Overflow and data.table issue tracker for advice."
 msgstr ""
 "A junção resulta em %d linhas, o que é mais do que %d = nrow(x) + nrow(i). "
-"Verifique se há valores de chave duplicados em i, cada um dos quais se junta"
-" ao mesmo grupo em x repetidamente. Se estiver correto, tente by=.EACHI para"
-" executar j para cada grupo e evitar uma grande alocação. Se tiver certeza "
-"de que deseja continuar, execute novamente com allow.cartesian=TRUE. Caso "
+"Verifique se há valores de chave duplicados em i, cada um dos quais se junta "
+"ao mesmo grupo em x repetidamente. Se estiver correto, tente by=.EACHI para "
+"executar j para cada grupo e evitar uma grande alocação. Se tiver certeza de "
+"que deseja continuar, execute novamente com allow.cartesian=TRUE. Caso "
 "contrário, procure esta mensagem de erro no FAQ, Wiki, Stack Overflow e "
 "rastreador de problemas do data.table para obter conselhos."
 
@@ -5229,9 +5233,9 @@ msgstr "O nome do atributo deve ser um vetor de caracteres de comprimento 1"
 
 #: wrappers.c:16
 msgid ""
-"Internal structure doesn't seem to be a list. Can't set class to be "
-"'data.table' or 'data.frame'. Use 'as.data.table()' or 'as.data.frame()' "
-"methods instead."
+"Internal structure doesn't seem to be a list. Can't set class to be 'data."
+"table' or 'data.frame'. Use 'as.data.table()' or 'as.data.frame()' methods "
+"instead."
 msgstr ""
 "A estrutura interna não parece ser uma lista. Não é possível definir a "
 "classe como 'data.table' ou 'data.frame'. Use os métodos 'as.data.table()' "
@@ -5259,8 +5263,8 @@ msgstr "x não é um VECSXP"
 #: wrappers.c:106
 #, c-format
 msgid ""
-"dim.data.table expects a data.table as input (which is a list), but seems to"
-" be of type %s"
+"dim.data.table expects a data.table as input (which is a list), but seems to "
+"be of type %s"
 msgstr ""
 "dim.data.table espera uma data.table como entrada (que é uma lista), mas "
 "parece ser do tipo %s"
